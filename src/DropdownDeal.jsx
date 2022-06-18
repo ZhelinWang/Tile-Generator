@@ -1,7 +1,7 @@
 import { useState } from 'react'
-function Dropdown ({selected, setSelected}) {
+function DropdownDeal ({selected, setSelected}) {
   const [isActive, setIsActive] = useState(false);
-  const options = ['Large Tile', 'Small Tile', 'Banner'];
+  const options = ["Item X% Off", "Item X up to X% Off", "Buy X get X% Off", "Buy X get X Free/Half Price", "Buy X for X"];
   return (
     <div className='dropdown'>
       <div className='dropdown-btn' onClick={(e) => setIsActive(!isActive)}>
@@ -27,4 +27,4 @@ function Dropdown ({selected, setSelected}) {
   );
 }
 
-export default Dropdown
+export default DropdownDeal

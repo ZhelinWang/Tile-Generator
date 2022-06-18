@@ -1,5 +1,5 @@
 import { useState } from 'react'
-function Dropdown ({selected, setSelected}) {
+function DropdownTile ({selected, setSelected}) {
   const [isActive, setIsActive] = useState(false);
   const options = ['Large Tile', 'Small Tile', 'Banner'];
   return (
@@ -27,4 +27,4 @@ function Dropdown ({selected, setSelected}) {
   );
 }
 
-export default Dropdown
+export default DropdownTile
