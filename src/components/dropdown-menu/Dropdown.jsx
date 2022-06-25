@@ -4,6 +4,7 @@ function DropdownDeal ({options, selected, setSelected}) {
   const [isActive, setIsActive] = useState(false);
 
   return (
+    <>
     <div className='dropdown'>
       <div className='dropdown-btn' onClick={(e) => setIsActive(!isActive)}>
         {selected}
@@ -25,6 +26,7 @@ function DropdownDeal ({options, selected, setSelected}) {
         </div>
       )}
     </div>
+    </>
   );
 }
 

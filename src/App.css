@@ -8,6 +8,13 @@ body {
   background: #f3f3f3;
 }
 
+.outputbox {
+  position: relative;
+  margin: 5px auto;
+  padding: 10px 15px;
+  left: 30px;
+}
+
 .t7Logo {
   margin: 60px auto;
   padding: 0px 10px;
@@ -16,6 +23,26 @@ body {
   width: 15%;
   height: 15%;
 }
+
+img {
+  top: 20px;
+  width: 250px; 
+  padding: 15px 15px;
+  position: relative;
+  left: 50rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* .title {
+  margin: 60px auto;
+  padding: 0px 10px;
+  position: relative;
+  left: 35rem;
+  font-size: xx-large;
+} */
+
 
 .inputFields {
   margin: 5px auto;
@@ -38,7 +65,6 @@ body {
   margin: 10px auto;
   position: relative;
   user-select: none;
-
 }
 
 .dropdown .dropdown-btn {
