@@ -8,6 +8,7 @@ import Dropdown from '../dropdown-menu/Dropdown'
 import InputFields from '../textinput/InputFields'
 import FormControlLabel from '@mui/material/FormControlLabel'
 import Checkbox from '@mui/material/Checkbox'
+import { grey } from '@mui/material/colors'
 
 function HTMLGenerator (props) {
   const [inputData, setInputData] = useState({
@@ -16,7 +17,11 @@ function HTMLGenerator (props) {
     title: '',
     tileURL: '',
     picklistURL: '',
-    excludes: ''
+    excludes: '',
+    club: false,
+    white: false,
+    x: '',
+    y: ''
   })
   const [output, setOutput] = useState('')
 
@@ -25,6 +30,7 @@ function HTMLGenerator (props) {
   }
   return (
     <>
+      <br />
       <Dropdown
         style={{ zIndex: '10' }}
         options={['Large Tile', 'Small Tile', 'Banner']}
@@ -65,30 +71,67 @@ function HTMLGenerator (props) {
         style={{ zIndex: '1' }}
         options={[
           'Item X% Off',
-          'Item X up to X% Off',
-          'Buy X get X% Off',
-          'Buy X get X Free/Half Price',
-          'Buy X for X'
+          'Item X up to Y% Off',
+          'Buy X get Y% Off',
+          'Buy X get Y Free / Half Price',
+          'Buy X for Y'
         ]}
         selected={inputData.selectedDeal}
         onSelected={selectedItem => {
           setInputData({ ...inputData, selectedDeal: selectedItem })
         }}
       />
+      <InputFields
+        placeholder='X Value Here...'
+        value={inputData.x}
+        onKeyTyped={userInput => {
+          setInputData({ ...inputData, x: userInput.target.value })
+        }}
+      />
+      <InputFields
+        placeholder='Y Value Here...'
+        value={inputData.y}
+        onKeyTyped={userInput => {
+          setInputData({ ...inputData, y: userInput.target.value })
+        }}
+      />
+
       <GenerateButton onButtonClick={handleGenerate} />
-      <Outputbox output={output} />
       <FormControlLabel
         labelPlacement='start'
         className='checkboxClub'
-        control={<Checkbox sx={{ '& .MuiSvgIcon-root': { fontSize: 30 } }} />}
+        control={
+          <Checkbox
+            sx={{
+              color: grey[900],
+              '& .MuiSvgIcon-root': { fontSize: 30, color: grey[900] }
+            }}
+          />
+        }
         label='Club?'
+        checked={inputData.club}
+        onChange={event => {
+          setInputData({ ...inputData, club: event.target.checked })
+        }}
       />
       <FormControlLabel
         labelPlacement='start'
-        className='checkboxClub'
-        control={<Checkbox sx={{ '& .MuiSvgIcon-root': { fontSize: 30 } }} />}
-        label='Minified?'
+        className='checkboxColor'
+        control={
+          <Checkbox
+            sx={{
+              color: grey[900],
+              '& .MuiSvgIcon-root': { fontSize: 30, color: grey[900] }
+            }}
+          />
+        }
+        label='White?'
+        checked={inputData.white}
+        onChange={event => {
+          setInputData({ ...inputData, white: event.target.checked })
+        }}
       />
+      <Outputbox output={output} />
     </>
   )
 }

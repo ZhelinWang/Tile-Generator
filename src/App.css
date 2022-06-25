@@ -29,7 +29,7 @@ img {
   width: 250px;
   padding: 15px 15px;
   position: relative;
-  left: 50rem;
+  left: 795px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -47,7 +47,7 @@ img {
   /* margin: 5px auto; redacted */
   padding: 10px 15px;
   position: relative;
-  left: 40%;
+  left: 760px;
   width: 350px;
 }
 
@@ -75,6 +75,7 @@ img {
   justify-content: space-between;
   cursor: pointer;
   z-index: 12;
+  border-radius: 10px;
 }
 
 .dropdown .dropdown-content {
@@ -105,11 +106,20 @@ img {
 .generateButton {
   position: relative;
   margin: 5px auto;
-  left: 40%;
+  bottom: -3px;
+  left: 770px;
 }
 
 .checkboxClub {
   position: relative;
   margin: 5px auto;
-  left: 42%;
+  bottom: -3px;
+  left: 840px;
+}
+
+.checkboxColor {
+  position: relative;
+  margin: 5px auto;
+  bottom: -3px;
+  left: 850px;
 }

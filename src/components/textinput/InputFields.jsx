@@ -1,5 +1,6 @@
 import * as React from 'react'
 import TextField from '@mui/material/TextField'
+import { withTheme } from '@emotion/react'
 
 function InputFields ({ placeholder, onKeyTyped, value }) {
   return (
@@ -11,7 +12,12 @@ function InputFields ({ placeholder, onKeyTyped, value }) {
           value={value}
           onChange={onKeyTyped}
           placeholder={placeholder}
-          sx={{ width: '385px', margin: '4px auto' }}
+          variant='outlined'
+          sx={{
+            width: '400px',
+            margin: '4px auto',
+            backgroundColor: 'white'
+          }}
         />
       </div>
     </>
