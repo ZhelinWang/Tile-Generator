@@ -1,10 +1,18 @@
 import * as React from 'react'
+import TextField from '@mui/material/TextField'
 
-function InputFields ({ placeholder }) {
+function InputFields ({ placeholder, onKeyTyped, value }) {
   return (
     <>
       <div>
-        <input className='inputFields' placeholder={placeholder} />
+        <TextField
+          className='inputFields'
+          //   required label='Required'
+          value={value}
+          onChange={onKeyTyped}
+          placeholder={placeholder}
+          sx={{ width: '385px', margin: '4px auto' }}
+        />
       </div>
     </>
   )

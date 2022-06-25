@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-function DropdownDeal ({ options, selected, onSelected }) {
+function Dropdown ({ options, selected, onSelected }) {
   const [isActive, setIsActive] = useState(false)
 
   return (
@@ -30,4 +30,4 @@ function DropdownDeal ({ options, selected, onSelected }) {
   )
 }
 
-export default DropdownDeal
+export default Dropdown

@@ -12,11 +12,15 @@ import Checkbox from '@mui/material/Checkbox'
 function HTMLGenerator (props) {
   const [inputData, setInputData] = useState({
     selectedTile: 'Select type of Tile...',
-    selectedDeal: 'Select type of Deal...'
+    selectedDeal: 'Select type of Deal...',
+    title: '',
+    tileURL: '',
+    picklistURL: '',
+    excludes: ''
   })
   const [output, setOutput] = useState('')
 
-  async function handleClick () {
+  async function handleGenerate () {
     console.log(inputData)
   }
   return (
@@ -29,10 +33,34 @@ function HTMLGenerator (props) {
           setInputData({ ...inputData, selectedTile: selectedItem })
         }}
       />
-      <InputFields placeholder='Input Tile Title Here...' />
-      <InputFields placeholder='Input Tile Image URL Here...' />
-      <InputFields placeholder='Input Tile Picklist URL Here...' />
-      <InputFields placeholder='Input Tile *Excludes Here...' />
+      <InputFields
+        placeholder='Input Tile Title Here...'
+        value={inputData.title}
+        onKeyTyped={userInput => {
+          setInputData({ ...inputData, title: userInput.target.value })
+        }}
+      />
+      <InputFields
+        placeholder='Input Tile Image URL Here...'
+        value={inputData.tileURL}
+        onKeyTyped={userInput => {
+          setInputData({ ...inputData, tileURL: userInput.target.value })
+        }}
+      />
+      <InputFields
+        placeholder='Input Tile Picklist URL Here...'
+        value={inputData.picklistURL}
+        onKeyTyped={userInput => {
+          setInputData({ ...inputData, picklistURL: userInput.target.value })
+        }}
+      />
+      <InputFields
+        placeholder='Input Tile *Excludes Here...'
+        value={inputData.excludes}
+        onKeyTyped={userInput => {
+          setInputData({ ...inputData, excludes: userInput.target.value })
+        }}
+      />
       <Dropdown
         style={{ zIndex: '1' }}
         options={[
@@ -47,7 +75,7 @@ function HTMLGenerator (props) {
           setInputData({ ...inputData, selectedDeal: selectedItem })
         }}
       />
-      <GenerateButton onButtonClick={handleClick} />
+      <GenerateButton onButtonClick={handleGenerate} />
       <Outputbox output={output} />
       <FormControlLabel
         labelPlacement='start'
