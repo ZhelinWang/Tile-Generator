@@ -21,7 +21,7 @@ function HTMLGenerator (props) {
   const [output, setOutput] = useState('')
 
   async function handleGenerate () {
-    console.log(inputData)
+    setOutput(JSON.stringify(inputData))
   }
   return (
     <>
