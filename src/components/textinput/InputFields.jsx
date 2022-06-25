@@ -1,14 +1,13 @@
+import * as React from 'react'
 
-import * as React from 'react';
-
-function InputFields({placeholder}) {
-    return (
+function InputFields ({ placeholder }) {
+  return (
     <>
-        <div>
+      <div>
         <input className='inputFields' placeholder={placeholder} />
-        </div>
+      </div>
     </>
-    )
-};
+  )
+}
 
-export default InputFields;
+export default InputFields

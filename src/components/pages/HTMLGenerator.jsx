@@ -10,24 +10,24 @@ import FormControlLabel from '@mui/material/FormControlLabel'
 import Checkbox from '@mui/material/Checkbox'
 
 function HTMLGenerator (props) {
-  const [selectedTile, setSelectedTile] = useState('Select Type of Deal ')
-  const [selectedDeal, setSelectedDeal] = useState('Select Type of Tile ')
+  const [inputData, setInputData] = useState({
+    selectedTile: 'Select type of Tile...',
+    selectedDeal: 'Select type of Deal...'
+  })
   const [output, setOutput] = useState('')
 
   async function handleClick () {
-    const request = await axios.get(
-      'https://random-data-api.com/api/name/random_name'
-    )
-    console.log(request.data)
-    setOutput(request.data.name)
+    console.log(inputData)
   }
   return (
     <>
       <Dropdown
         style={{ zIndex: '10' }}
         options={['Large Tile', 'Small Tile', 'Banner']}
-        selected={selectedDeal}
-        setSelected={setSelectedDeal}
+        selected={inputData.selectedTile}
+        onSelected={selectedItem => {
+          setInputData({ ...inputData, selectedTile: selectedItem })
+        }}
       />
       <InputFields placeholder='Input Tile Title Here...' />
       <InputFields placeholder='Input Tile Image URL Here...' />
@@ -42,8 +42,10 @@ function HTMLGenerator (props) {
           'Buy X get X Free/Half Price',
           'Buy X for X'
         ]}
-        selected={selectedTile}
-        setSelected={setSelectedTile}
+        selected={inputData.selectedDeal}
+        onSelected={selectedItem => {
+          setInputData({ ...inputData, selectedDeal: selectedItem })
+        }}
       />
       <GenerateButton onButtonClick={handleClick} />
       <Outputbox output={output} />
