@@ -17,11 +17,11 @@ function HTMLGenerator (props) {
     title: '',
     tileURL: '',
     picklistURL: '',
-    excludes: '',
     club: false,
     white: false,
     x: '',
-    y: ''
+    y: '',
+    excludes: ''
   })
   const [output, setOutput] = useState('')
 
@@ -60,15 +60,8 @@ function HTMLGenerator (props) {
           setInputData({ ...inputData, picklistURL: userInput.target.value })
         }}
       />
-      <InputFields
-        placeholder='Input Tile *Excludes Here...'
-        value={inputData.excludes}
-        onKeyTyped={userInput => {
-          setInputData({ ...inputData, excludes: userInput.target.value })
-        }}
-      />
       <Dropdown
-        style={{ zIndex: '1' }}
+        style={{ zIndex: '10' }}
         options={[
           'Item X% Off',
           'Item X up to Y% Off',
@@ -82,20 +75,26 @@ function HTMLGenerator (props) {
         }}
       />
       <InputFields
-        placeholder='X Value Here...'
+        placeholder='Input X Value Here...'
         value={inputData.x}
         onKeyTyped={userInput => {
           setInputData({ ...inputData, x: userInput.target.value })
         }}
       />
       <InputFields
-        placeholder='Y Value Here...'
+        placeholder='Input Y Value Here...'
         value={inputData.y}
         onKeyTyped={userInput => {
           setInputData({ ...inputData, y: userInput.target.value })
         }}
       />
-
+      <InputFields
+        placeholder='*Excludes...'
+        value={inputData.excludes}
+        onKeyTyped={userInput => {
+          setInputData({ ...inputData, excludes: userInput.target.value })
+        }}
+      />
       <GenerateButton onButtonClick={handleGenerate} />
       <FormControlLabel
         labelPlacement='start'
