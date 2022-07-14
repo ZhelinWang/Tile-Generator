@@ -4,17 +4,18 @@ import TextField from '@mui/material/TextField'
 
 function Outputbox (props) {
   return (
+    
     <Box
+      style={{ width: 1200 }}
       sx={{
-        width: 1760,
-        length: '50px',
-        maxWidth: '100%',
+
         position: 'relative',
-        top: '120px',
-        left: '5rem',
+        left: '20%',
       }}
     >
-      {props.output}
+      <p>{["<!-- {tile starts here...} -->"]}</p>
+      <br/>{props.output}
+      <p><br/>{["<!-- {tile ends here...} -->"]}</p>
       
     </Box>
 

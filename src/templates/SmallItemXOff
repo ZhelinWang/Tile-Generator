@@ -1,0 +1,54 @@
+<!-- {tile starts here...} -->
+
+<div class="u-columns__column u-columns__column--six-s todo-item lmdd-block u-columns__column--three-l">
+    <!---->
+    <!---->
+    <!---->
+    <article class="c-tile__wrap u-light-mode"><a href="https://www.torpedo7.co.nz/shop/snow/picklist/32988" aria-hidden="true" data-twg-id="" class="c-tile__link promo_box">Torpedo7-branded Snow Clothing & Gloves</a>
+        <!---->
+        <div class="c-tile-top u-bg-white c-tile  u-aspect-one-by-one u-aspect-eight-by-nine-m">
+            <div class="c-tile-coupon3__image" style="background-image: url(&quot;https://www.torpedo7.co.nz/images/banners/2022-06-21/tiles/15.png&quot;);">
+                <br></div>
+            <div class="c-tile-coupon3__content-wrap">
+                <div class="c-tile-coupon3__content ">
+                    <h3 class="c-tile-coupon3__heading t-heading u-font"><small contenteditable="false"></small></h3>
+                    <h5 contenteditable="false" class="c-tile-coupon3__heading t-heading" style="color:black !important">Torpedo7-branded <br>Snow Clothing & Gloves</h5>
+                    <div class="c-tile-coupon3__offer">
+
+                        <div class="c-lockup">
+                            <!--<div class="c-lockup__price-title">-->
+                            <!--    <div class="c-lockup__seperator t-line"></div>-->
+                            <!--    <div class="c-lockup__label t-bold-weight">UP TO</div>-->
+                            <!--    <div class="c-lockup__seperator t-line"></div>-->
+                            <!--</div>-->
+                            <div class="u-flex-column">
+                                <div class="u-flex">
+                                    <div contenteditable="false" class="c-lockup__number t-bold-weight" style="color:black !important">
+                                        30</div>
+                                    <div class="c-lockup__price-suffix">
+                                        <div class="c-lockup__number-percentage t-bold-weight" style="color:black !important">%</div>
+                                        <div class="c-lockup__number-off t-bold-weight" style="color:black !important">Off</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-lockup">
+                        <!--<div class="c-lockup__price-title mt-1">-->
+                        <!--    <div class="u-flex-justify-center c-lockup__label u-uppercase"><small contenteditable="false">*Excludes Trek Rail E-Bikes</small></div>-->
+                        <!--</div>-->
+                    </div>
+                    <!---->
+                </div>
+            </div>
+            <!---->
+            <div class="c-tile-coupon3__footer">
+                <div class="c-pill c-club-tag c-tile-coupon3__pill">CLUB OFFER</div>
+            </div>
+        </div>
+    </article>
+</div>
+
+    <!-- {tile ends here...} -->
+
+    

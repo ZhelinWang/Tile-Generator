@@ -1,6 +1,6 @@
 {
   "name": "tile-generator",
-  "version": "0.1.0",
+  "version": "0.5.0",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.9.3",
@@ -33,7 +33,7 @@
       "last 1 safari version"
     ]
   },
-  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "description": "This project was built to speed up T7 tile generation.",
   "main": "index.js",
   "devDependencies": {},
   "keywords": [],
