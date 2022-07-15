@@ -31,7 +31,9 @@ function Navbar () {
         }}
       >
         <Toolbar>
+          <a href= "https://t7-webtile-generator.netlify.app/">
           <img src='/images/logo.svg' alt='T7 Logo' />
+          </a>
         </Toolbar>
       </AppBar>
     </ThemeProvider>

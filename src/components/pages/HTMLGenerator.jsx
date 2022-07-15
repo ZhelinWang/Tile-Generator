@@ -133,7 +133,7 @@ function HTMLGenerator (props) {
                             <div class="u-flex-column">
                                 <div class="u-flex">
                                     <div contenteditable="false" class="c-lockup__number t-bold-weight" style="color:${
-                                      inputData.white ? 'white' : 'black'} !important;">30</div>
+                                      inputData.white ? 'white' : 'black'} !important;">${inputData.x}</div>
                                     <div class="c-lockup__price-suffix">
                                         <div class="c-lockup__number-percentage t-bold-weight" style="color:${
                                           inputData.white ? 'white' : 'black'} !important;">%</div>
@@ -163,8 +163,223 @@ function HTMLGenerator (props) {
                   </div>
               </article>
           </div>
+    ` : inputData.selectedDeal == "Buy X get Y% Off" ? ` 
+    
+    <div class="u-columns__column u-columns__column--six-s todo-item lmdd-block u-columns__column--three-l">
+    <article class="c-tile__wrap u-light-mode"><a href="${inputData.picklistURL}" aria-hidden="true" data-twg-id="" class="c-tile__link promo_box">${inputData.title}
+    </a>
+        <div class="c-tile-top u-bg-white c-tile c-tile-coupon2 u-aspect-nine-by-eight u-aspect-eight-by-nine-m">
+            <div class="c-tile-coupon3__image" style="background-image: url(&quot;${inputData.imageURL.length > 53 ? inputData.imageURL : "https://www.torpedo7.co.nz" + inputData.imageURL}&quot;);"><br></div>
+            <div class="c-tile-coupon3__content-wrap">
+                <div class="c-tile-coupon3__content ">
+                    <h3 class="c-tile-coupon3__heading t-heading u-font"><small contenteditable="false"></small></h3>
+                    <h5 contenteditable="false" class="c-tile-coupon3__heading t-heading" style="color:${
+                      inputData.white ? 'white' : 'black'} !important;">${inputData.title}</h5>
+                    <div class="c-tile-coupon3__offer">
+                        <div class="c-lockup">
+                            <div class="c-lockup__price-title">
+                                <div class="c-lockup__seperator t-line" style="background:${
+                                  inputData.white ? 'white' : 'black'} !important;"></div>
+                                <div class="c-lockup__label t-bold-weight" style="color:${
+                                  inputData.white ? 'white' : 'black'} !important;">BUY ${inputData.x} GET</div>
+                                <div class="c-lockup__seperator t-line" style="background:${
+                                  inputData.white ? 'white' : 'black'} !important;"></div>
+                            </div>
+                            <div class="u-flex-column">
+                                <div class="u-flex">
+                                    <div contenteditable="false" class="c-lockup__number t-bold-weight" style="color:${
+                                      inputData.white ? 'white' : 'black'} !important;">${inputData.y}</div>
+                                    <div class="c-lockup__price-suffix">
+                                        <div class="c-lockup__number-percentage t-bold-weight" style="color:${
+                                          inputData.white ? 'white' : 'black'} !important;">%</div>
+                                        <div class="c-lockup__number-off t-bold-weight" style="color: ${
+                                          inputData.white ? 'white' : 'black'} !important;">Off</div>
+                                          </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                              ${inputData.excludes ? `<div class="c-lockup">
+                                          <div class="c-lockup__price-title mt-1">
+                                            <div class="u-flex-justify-center c-lockup__label u-uppercase" style="color:${
+                                              inputData.white ? 'white' : 'black'} !important;"><small contenteditable="false" style="color:${
+                                              inputData.white ? 'white' : 'black'} !important;">${inputData.excludes}</small></div>
+                                          </div>
+                                        </div>`: ''}
+                              </div>
+                              <!---->
+                          </div>
+                      </div>
+                      <!---->
+                      ${inputData.club ? `
+                      <div class="c-tile-coupon3__footer">
+                        <div class="c-pill c-club-tag c-tile-coupon3__pill">CLUB OFFER</div>
+                      </div>` : ''}
+                  </div>
+              </article>
+          </div>
+    ` : inputData.selectedDeal == "Buy X get Y Half Price" ? ` 
+    
+    <div class="u-columns__column u-columns__column--six-s todo-item lmdd-block u-columns__column--three-l">
+    <article class="c-tile__wrap u-light-mode"><a href="${inputData.picklistURL}" aria-hidden="true" data-twg-id="" class="c-tile__link promo_box">${inputData.title}
+    </a>
+        <div class="c-tile-top u-bg-white c-tile c-tile-coupon2 u-aspect-nine-by-eight u-aspect-eight-by-nine-m">
+            <div class="c-tile-coupon3__image" style="background-image: url(&quot;${inputData.imageURL.length > 53 ? inputData.imageURL : "https://www.torpedo7.co.nz" + inputData.imageURL}&quot;);"><br></div>
+            <div class="c-tile-coupon3__content-wrap">
+                <div class="c-tile-coupon3__content ">
+                    <h3 class="c-tile-coupon3__heading t-heading u-font"><small contenteditable="false"></small></h3>
+                    <h5 contenteditable="false" class="c-tile-coupon3__heading t-heading" style="color:${
+                      inputData.white ? 'white' : 'black'} !important;">${inputData.title}</h5>
+                    <div class="c-tile-coupon3__offer">
+                        <div class="c-lockup">
+                            <div class="c-lockup__price-title">
+                                <div class="c-lockup__seperator t-line" style="background:${
+                                  inputData.white ? 'white' : 'black'} !important;"></div>
+                                <div class="c-lockup__label t-bold-weight" style="color:${
+                                  inputData.white ? 'white' : 'black'} !important;">BUY ${inputData.x} GET ${inputData.y}</div>
+                                <div class="c-lockup__seperator t-line" style="background:${
+                                  inputData.white ? 'white' : 'black'} !important;"></div>
+                            </div>
+                            <div class="u-flex-column">
+                                <div class="u-flex">
+                                    <div contenteditable="false" class="c-lockup__number t-bold-weight" style="color:${
+                                      inputData.white ? 'white' : 'black'} !important;">HALF PRICE</div>
+                                    <div class="c-lockup__price-suffix">
+                                        <div class="c-lockup__number-percentage t-bold-weight" style="color:${
+                                          inputData.white ? 'white' : 'black'} !important;">%</div>
+                                        <div class="c-lockup__number-off t-bold-weight" style="color: ${
+                                          inputData.white ? 'white' : 'black'} !important;">Off</div>
+                                          </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                              ${inputData.excludes ? `<div class="c-lockup">
+                                          <div class="c-lockup__price-title mt-1">
+                                            <div class="u-flex-justify-center c-lockup__label u-uppercase" style="color:${
+                                              inputData.white ? 'white' : 'black'} !important;"><small contenteditable="false" style="color:${
+                                              inputData.white ? 'white' : 'black'} !important;">${inputData.excludes}</small></div>
+                                          </div>
+                                        </div>`: ''}
+                              </div>
+                              <!---->
+                          </div>
+                      </div>
+                      <!---->
+                      ${inputData.club ? `
+                      <div class="c-tile-coupon3__footer">
+                        <div class="c-pill c-club-tag c-tile-coupon3__pill">CLUB OFFER</div>
+                      </div>` : ''}
+                  </div>
+              </article>
+          </div>
+    ` : inputData.selectedDeal == "Buy X get Y Free" ? ` 
+    
+    <div class="u-columns__column u-columns__column--six-s todo-item lmdd-block u-columns__column--three-l">
+    <article class="c-tile__wrap u-light-mode"><a href="${inputData.picklistURL}" aria-hidden="true" data-twg-id="" class="c-tile__link promo_box">${inputData.title}
+    </a>
+        <div class="c-tile-top u-bg-white c-tile c-tile-coupon2 u-aspect-nine-by-eight u-aspect-eight-by-nine-m">
+            <div class="c-tile-coupon3__image" style="background-image: url(&quot;${inputData.imageURL.length > 53 ? inputData.imageURL : "https://www.torpedo7.co.nz" + inputData.imageURL}&quot;);"><br></div>
+            <div class="c-tile-coupon3__content-wrap">
+                <div class="c-tile-coupon3__content ">
+                    <h3 class="c-tile-coupon3__heading t-heading u-font"><small contenteditable="false"></small></h3>
+                    <h5 contenteditable="false" class="c-tile-coupon3__heading t-heading" style="color:${
+                      inputData.white ? 'white' : 'black'} !important;">${inputData.title}</h5>
+                    <div class="c-tile-coupon3__offer">
+                        <div class="c-lockup">
+                            <div class="c-lockup__price-title">
+                                <div class="c-lockup__seperator t-line" style="background:${
+                                  inputData.white ? 'white' : 'black'} !important;"></div>
+                                <div class="c-lockup__label t-bold-weight" style="color:${
+                                  inputData.white ? 'white' : 'black'} !important;">BUY ${inputData.x} GET ${inputData.y}</div>
+                                <div class="c-lockup__seperator t-line" style="background:${
+                                  inputData.white ? 'white' : 'black'} !important;"></div>
+                            </div>
+                            <div class="u-flex-column">
+                                <div class="u-flex">
+                                    <div contenteditable="false" class="c-lockup__number t-bold-weight" style="color:${
+                                      inputData.white ? 'white' : 'black'} !important;">FREE</div>
+                                    <div class="c-lockup__price-suffix">
+                                        <div class="c-lockup__number-percentage t-bold-weight" style="color:${
+                                          inputData.white ? 'white' : 'black'} !important;">%</div>
+                                        <div class="c-lockup__number-off t-bold-weight" style="color: ${
+                                          inputData.white ? 'white' : 'black'} !important;">Off</div>
+                                          </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                              ${inputData.excludes ? `<div class="c-lockup">
+                                          <div class="c-lockup__price-title mt-1">
+                                            <div class="u-flex-justify-center c-lockup__label u-uppercase" style="color:${
+                                              inputData.white ? 'white' : 'black'} !important;"><small contenteditable="false" style="color:${
+                                              inputData.white ? 'white' : 'black'} !important;">${inputData.excludes}</small></div>
+                                          </div>
+                                        </div>`: ''}
+                              </div>
+                              <!---->
+                          </div>
+                      </div>
+                      <!---->
+                      ${inputData.club ? `
+                      <div class="c-tile-coupon3__footer">
+                        <div class="c-pill c-club-tag c-tile-coupon3__pill">CLUB OFFER</div>
+                      </div>` : ''}
+                  </div>
+              </article>
+          </div>
+    ` : inputData.selectedDeal == "Was X, Save $Y" ? ` 
+    
+    <div class="u-columns__column u-columns__column--six-s todo-item lmdd-block u-columns__column--three-l">
+    <article class="c-tile__wrap u-light-mode"><a href="${inputData.picklistURL}" aria-hidden="true" data-twg-id="" class="c-tile__link promo_box">${inputData.title}
+    </a>
+        <div class="c-tile-top u-bg-white c-tile c-tile-coupon2 u-aspect-nine-by-eight u-aspect-eight-by-nine-m">
+            <div class="c-tile-coupon3__image" style="background-image: url(&quot;${inputData.imageURL.length > 53 ? inputData.imageURL : "https://www.torpedo7.co.nz" + inputData.imageURL}&quot;);"><br></div>
+            <div class="c-tile-coupon3__content-wrap">
+                <div class="c-tile-coupon3__content ">
+                    <h3 class="c-tile-coupon3__heading t-heading u-font"><small contenteditable="false"></small></h3>
+                    <h5 contenteditable="false" class="c-tile-coupon3__heading t-heading" style="color:${
+                      inputData.white ? 'white' : 'black'} !important;">${inputData.title}</h5>
+                      <div class="c-tile-coupon3__offer">
+                      <div class="c-lockup">
+                          <div class="c-lockup__price-title">
+                            <div class="c-card-promo-product3__price-old">$${inputData.x}</div>
+                            <div class="c-card-promo-product3__offer" style="color:black;">SAVE $${inputData.y}</div>
+                          </div>
+                          <div class="u-flex-column">
+                              <div class="u-flex">
+                              <div class="c-card-promo-product3__price-dollars" style="color:${
+                                inputData.white ? 'white' : 'black'} !important;">$</div>
+                              <div class="c-card-promo-product3__price" style="color:${
+                                inputData.white ? 'white' : 'black'} !important;">${roundToTwo(inputData.x - inputData.y)}
+                                </div>
+                              
+              
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              
+                              ${inputData.excludes ? `<div class="c-lockup">
+                                          <div class="c-lockup__price-title mt-1">
+                                            <div class="u-flex-justify-center c-lockup__label u-uppercase" style="color:${
+                                              inputData.white ? 'white' : 'black'} !important;"><small contenteditable="false" style="color:${
+                                              inputData.white ? 'white' : 'black'} !important;">${inputData.excludes}</small></div>
+                                          </div>
+                                        </div>`: ''}
+                              </div>
+                              <!---->
+                          </div>
+                      </div>
+                      <!---->
+                      ${inputData.club ? `
+                      <div class="c-tile-coupon3__footer">
+                        <div class="c-pill c-club-tag c-tile-coupon3__pill">CLUB OFFER</div>
+                      </div>` : ''}
+                  </div>
+              </article>
+          </div>
     ` : "not implemented yet";
-
 
     console.log(output)
     return output
@@ -176,7 +391,7 @@ function HTMLGenerator (props) {
                   <div class="u-columns__column u-columns__column--six-s todo-item lmdd-block u-columns__column--six-l">
                       <article class="c-tile__wrap u-light-mode"><a href="${inputData.picklistURL}" aria-hidden="true" data-twg-id="" class="c-tile__link promo_box">${inputData.title}</a>
                           <div class="c-tile-top u-bg-white c-tile c-tile-coupon2 u-aspect-nine-by-eight u-aspect-eight-by-nine-m u-aspect-sixteen-by-nine-l">
-                              <div class="c-tile-coupon3__image" style="background-image: url(&quot;${inputData.imageURL.length > 53 ? inputData.imageURL : "https://www.torpedo7.co.nz" + inputData.imageURL}&quot);"><br></div>
+                              <div class="c-tile-coupon3__image" style="background-image: url(&quot;${inputData.imageURL.length > 53 ? inputData.imageURL : "https://www.torpedo7.co.nz" + inputData.imageURL}&quot;);"><br></div>
                               <div class="c-tile-coupon3__content-wrap">
                                   <div class="c-tile-coupon3__content ">
                                       <h3 class="c-tile-coupon3__heading t-heading u-font"><small contenteditable="false"></small></h3>
@@ -224,7 +439,7 @@ function HTMLGenerator (props) {
         <div class="u-columns__column u-columns__column--six-s todo-item lmdd-block u-columns__column--six-l">
         <article class="c-tile__wrap u-light-mode"><a href="${inputData.picklistURL}" aria-hidden="true" data-twg-id="" class="c-tile__link promo_box">${inputData.title}</a>
             <div class="c-tile-top u-bg-white c-tile c-tile-coupon2 u-aspect-nine-by-eight u-aspect-eight-by-nine-m u-aspect-sixteen-by-nine-l">
-                <div class="c-tile-coupon3__image" style="background-image: url(&quot;${inputData.imageURL.length > 53 ? inputData.imageURL : "https://www.torpedo7.co.nz" + inputData.imageURL}&quot);"><br></div>
+                <div class="c-tile-coupon3__image" style="background-image: url(&quot;${inputData.imageURL.length > 53 ? inputData.imageURL : "https://www.torpedo7.co.nz" + inputData.imageURL}&quot;);"><br></div>
                 <div class="c-tile-coupon3__content-wrap">
                     <div class="c-tile-coupon3__content ">
                         <h3 class="c-tile-coupon3__heading t-heading u-font"><small contenteditable="false"></small></h3>
@@ -272,7 +487,7 @@ function HTMLGenerator (props) {
       <div class="u-columns__column u-columns__column--six-s todo-item lmdd-block u-columns__column--six-l">
       <article class="c-tile__wrap u-light-mode"><a href="${inputData.picklistURL}" aria-hidden="true" data-twg-id="" class="c-tile__link promo_box">${inputData.title}</a>
           <div class="c-tile-top u-bg-white c-tile c-tile-coupon2 u-aspect-nine-by-eight u-aspect-eight-by-nine-m u-aspect-sixteen-by-nine-l">
-              <div class="c-tile-coupon3__image" style="background-image: url(&quot;${inputData.imageURL.length > 53 ? inputData.imageURL : "https://www.torpedo7.co.nz" + inputData.imageURL}&quot);"><br></div>
+              <div class="c-tile-coupon3__image" style="background-image: url(&quot;${inputData.imageURL.length > 53 ? inputData.imageURL : "https://www.torpedo7.co.nz" + inputData.imageURL}&quot;);"><br></div>
               <div class="c-tile-coupon3__content-wrap">
                   <div class="c-tile-coupon3__content ">
                       <h3 class="c-tile-coupon3__heading t-heading u-font"><small contenteditable="false"></small></h3>
@@ -364,7 +579,7 @@ function HTMLGenerator (props) {
   <div class="u-columns__column u-columns__column--six-s todo-item lmdd-block u-columns__column--six-l">
   <article class="c-tile__wrap u-light-mode"><a href="${inputData.picklistURL}" aria-hidden="true" data-twg-id="" class="c-tile__link promo_box">${inputData.title}</a>
       <div class="c-tile-top u-bg-white c-tile c-tile-coupon2 u-aspect-nine-by-eight u-aspect-eight-by-nine-m u-aspect-sixteen-by-nine-l">
-          <div class="c-tile-coupon3__image" style="background-image: url(&quot;${inputData.imageURL.length > 53 ? inputData.imageURL : "https://www.torpedo7.co.nz" + inputData.imageURL}&quot);"><br></div>
+          <div class="c-tile-coupon3__image" style="background-image: url(&quot;${inputData.imageURL.length > 53 ? inputData.imageURL : "https://www.torpedo7.co.nz" + inputData.imageURL}&quot;);"><br></div>
           <div class="c-tile-coupon3__content-wrap">
               <div class="c-tile-coupon3__content ">
                   <h3 class="c-tile-coupon3__heading t-heading u-font"><small contenteditable="false"></small></h3>
@@ -404,11 +619,11 @@ function HTMLGenerator (props) {
       </div>
     </article>
   </div>
-` : inputData.selectedDeal == 'Was X, Save Y' ? ` 
+` : inputData.selectedDeal == 'Was X, Save $Y' ? ` 
 <div class="u-columns__column u-columns__column--six-s todo-item lmdd-block u-columns__column--six-l">
 <article class="c-tile__wrap u-light-mode"><a href="${inputData.picklistURL}" aria-hidden="true" data-twg-id="" class="c-tile__link promo_box">${inputData.title}</a>
     <div class="c-tile-top u-bg-white c-tile c-tile-coupon2 u-aspect-nine-by-eight u-aspect-eight-by-nine-m u-aspect-sixteen-by-nine-l">
-        <div class="c-tile-coupon3__image" style="background-image: url(&quot;${inputData.imageURL.length > 53 ? inputData.imageURL : "https://www.torpedo7.co.nz" + inputData.imageURL}&quot);"><br></div>
+        <div class="c-tile-coupon3__image" style="background-image: url(&quot;${inputData.imageURL.length > 53 ? inputData.imageURL : "https://www.torpedo7.co.nz" + inputData.imageURL}&quot;);"><br></div>
         <div class="c-tile-coupon3__content-wrap">
             <div class="c-tile-coupon3__content ">
                 <h3 class="c-tile-coupon3__heading t-heading u-font"><small contenteditable="false"></small></h3>
@@ -419,17 +634,17 @@ function HTMLGenerator (props) {
                         <div class="c-lockup__price-title">
                           <div class="c-card-promo-product3__price-old">$${inputData.x}</div>
                           <div class="c-card-promo-product3__offer" style="color:black;">SAVE $${inputData.y}</div>
-                            <div class="c-lockup__seperator t-line" style="background:${
-                              inputData.white ? 'white' : 'black'} !important;"></div>
                         </div>
                         <div class="u-flex-column">
-                            <div class="u-flex">
-                                <div contenteditable="false" class="c-lockup__number t-bold-weight" style="color:${
-                                  inputData.white ? 'white' : 'black'} !important;">$${roundToTwo(inputData.x - inputData.y)}</div>
-                                <div class="c-lockup__price-suffix">
+                        <div class="u-flex">
+                        <div class="c-card-promo-product3__price-dollars" style="color:${
+                          inputData.white ? 'white' : 'black'} !important;">$</div>
+                        <div class="c-card-promo-product3__price" style="color:${
+                          inputData.white ? 'white' : 'black'} !important;">${roundToTwo(inputData.x - inputData.y)}
                             </div>
                         </div>
                     </div>
+                    
                 </div>
             </div>
             ${inputData.excludes ? `<div class="c-lockup">
@@ -492,7 +707,7 @@ function HTMLGenerator (props) {
           'Buy X get Y% Off',
           'Buy X get Y Half Price',
           'Buy X get Y Free',
-          'Was X, Save Y'
+          'Was X, Save $Y'
         ]}
         selected={inputData.selectedDeal}
         onSelected={selectedItem => {
