@@ -6,6 +6,7 @@ function Outputbox (props) {
   return (
     
     <Box
+    
       style={{ width: 1200 }}
       sx={{
 

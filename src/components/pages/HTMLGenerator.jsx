@@ -10,6 +10,7 @@ import FormControlLabel from '@mui/material/FormControlLabel'
 import Checkbox from '@mui/material/Checkbox'
 import { grey } from '@mui/material/colors'
 
+
 function roundToTwo(num) {
   return +(Math.round(num + "e+2")  + "e-2");
 }
@@ -40,10 +41,10 @@ function HTMLGenerator (props) {
         break;
       case "Large Tile": 
         generatedHTML = tileLarge(inputData)
-        console.log("hi")
         break;
       case "Banner": 
         generatedHTML = tileBanner(inputData)
+        alert("Banner is currently WIP")
         break;  
       default:
         alert("Please select a tile type...")
@@ -242,13 +243,11 @@ function HTMLGenerator (props) {
                             </div>
                             <div class="u-flex-column">
                                 <div class="u-flex">
-                                    <div contenteditable="false" class="c-lockup__number t-bold-weight" style="color:${
-                                      inputData.white ? 'white' : 'black'} !important;">HALF PRICE</div>
+                                
                                     <div class="c-lockup__price-suffix">
                                         <div class="c-lockup__number-percentage t-bold-weight" style="color:${
-                                          inputData.white ? 'white' : 'black'} !important;">%</div>
-                                        <div class="c-lockup__number-off t-bold-weight" style="color: ${
-                                          inputData.white ? 'white' : 'black'} !important;">Off</div>
+                                          inputData.white ? 'white' : 'black'} !important;">HALF PRICE</div>
+                                     
                                           </div>
                                           </div>
                                       </div>
@@ -297,13 +296,11 @@ function HTMLGenerator (props) {
                             </div>
                             <div class="u-flex-column">
                                 <div class="u-flex">
-                                    <div contenteditable="false" class="c-lockup__number t-bold-weight" style="color:${
-                                      inputData.white ? 'white' : 'black'} !important;">FREE</div>
+                                  
                                     <div class="c-lockup__price-suffix">
                                         <div class="c-lockup__number-percentage t-bold-weight" style="color:${
-                                          inputData.white ? 'white' : 'black'} !important;">%</div>
-                                        <div class="c-lockup__number-off t-bold-weight" style="color: ${
-                                          inputData.white ? 'white' : 'black'} !important;">Off</div>
+                                          inputData.white ? 'white' : 'black'} !important;">FREE</div>
+
                                           </div>
                                           </div>
                                       </div>
@@ -379,7 +376,7 @@ function HTMLGenerator (props) {
                   </div>
               </article>
           </div>
-    ` : "not implemented yet";
+    ` : alert("Please select a deal type...");
 
     console.log(output)
     return output
@@ -644,7 +641,7 @@ function HTMLGenerator (props) {
                             </div>
                         </div>
                     </div>
-                    
+
                 </div>
             </div>
             ${inputData.excludes ? `<div class="c-lockup">
@@ -661,7 +658,7 @@ function HTMLGenerator (props) {
     </div>
   </article>
 </div>
-` : "";
+` : alert("Please select a deal type...");
 
   console.log(output)
   return output
