@@ -79,7 +79,7 @@ function HTMLGenerator (props) {
                                       <div class="u-flex">
                                           <div contenteditable="false" class="c-lockup__number t-bold-weight" style="color:${
                                             inputData.white ? 'white' : 'black'} !important">
-                                              30</div>
+                                            ${inputData.x}</div>
                                           <div class="c-lockup__price-suffix">
                                               <div class="c-lockup__number-percentage t-bold-weight" style="color:${
                                                 inputData.white ? 'white' : 'black'} !important">%</div>
@@ -397,12 +397,7 @@ function HTMLGenerator (props) {
                                       <div class="c-tile-coupon3__offer">
                                           <div class="c-lockup">
                                               <div class="c-lockup__price-title">
-                                                <div class="c-lockup__seperator t-line" style="background:${
-                                                  inputData.white ? 'white' : 'black'} !important;"></div>
-                                                <div class="c-lockup__label t-bold-weight" style="color:${
-                                                  inputData.white ? 'white' : 'black'} !important;">UP TO</div>
-                                                <div class="c-lockup__seperator t-line" style="background:${
-                                                  inputData.white ? 'white' : 'black'} !important;"></div>
+                                
                                               </div>
                                               <div class="u-flex-column">
                                                   <div class="u-flex">
