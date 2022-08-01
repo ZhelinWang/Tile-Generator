@@ -106,7 +106,6 @@ function HTMLGenerator (props) {
                   <div class="c-tile-coupon3__footer">
                     <div class="c-pill c-club-tag c-tile-coupon3__pill">CLUB OFFER</div>
                   </div>` : ''}
-              </div>
           </article>
       </div>
     ` : inputData.selectedDeal == "Item upto X% Off" ? ` 
