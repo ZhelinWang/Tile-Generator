@@ -340,7 +340,8 @@ function HTMLGenerator (props) {
                       <div class="c-lockup">
                           <div class="c-lockup__price-title">
                             <div class="c-card-promo-product3__price-old">$${inputData.x}</div>
-                            <div class="c-card-promo-product3__offer" style="color:black;">SAVE $${inputData.y}</div>
+                            <div class="c-card-promo-product3__offer" style="color:${
+                              inputData.white ? 'white' : 'black'} !important;">SAVE $${inputData.y}</div>
                           </div>
                           <div class="u-flex-column">
                               <div class="u-flex">
