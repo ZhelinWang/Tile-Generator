@@ -24,10 +24,13 @@ function HTMLGenerator (props) {
     imageURL: '',
     picklistURL: '',
     club: false,
+    newin: '',
+    backinstock: '',
     white: false,
     x: '',
     y: '',
     excludes: ''
+
   })
   const [output, setOutput] = useState('')
 
@@ -106,6 +109,13 @@ function HTMLGenerator (props) {
                   <div class="c-tile-coupon3__footer">
                     <div class="c-pill c-club-tag c-tile-coupon3__pill">CLUB OFFER</div>
                   </div>` : ''}
+                  ${inputData.newin ? `
+                  <div class="c-tile-coupon3__footer">
+                  <div class="c-pill c-pill--primary c-tile-coupon3__pill">New In</div></div>` : ''}
+                  ${inputData.backinstock ? `
+                  <div class="c-tile-coupon3__footer">
+                  <div class="c-pill c-pill--primary c-tile-coupon3__pill">All Sizes Back In Stock</div>
+                  </div>` : ''}
           </article>
       </div>
     ` : inputData.selectedDeal == "Item upto X% Off" ? ` 
@@ -159,6 +169,13 @@ function HTMLGenerator (props) {
                       ${inputData.club ? `
                       <div class="c-tile-coupon3__footer">
                         <div class="c-pill c-club-tag c-tile-coupon3__pill">CLUB OFFER</div>
+                      </div>` : ''}
+                      ${inputData.newin ? `
+                      <div class="c-tile-coupon3__footer">
+                      <div class="c-pill c-pill--primary c-tile-coupon3__pill">New In</div></div>` : ''}
+                      ${inputData.backinstock ? `
+                      <div class="c-tile-coupon3__footer">
+                      <div class="c-pill c-pill--primary c-tile-coupon3__pill">All Sizes Back In Stock</div>
                       </div>` : ''}
                   </div>
               </article>
@@ -215,6 +232,13 @@ function HTMLGenerator (props) {
                       <div class="c-tile-coupon3__footer">
                         <div class="c-pill c-club-tag c-tile-coupon3__pill">CLUB OFFER</div>
                       </div>` : ''}
+                      ${inputData.newin ? `
+                      <div class="c-tile-coupon3__footer">
+                      <div class="c-pill c-pill--primary c-tile-coupon3__pill">New In</div></div>` : ''}
+                      ${inputData.backinstock ? `
+                      <div class="c-tile-coupon3__footer">
+                      <div class="c-pill c-pill--primary c-tile-coupon3__pill">All Sizes Back In Stock</div>
+                      </div>` : ''}
                   </div>
               </article>
           </div>
@@ -267,6 +291,13 @@ function HTMLGenerator (props) {
                       ${inputData.club ? `
                       <div class="c-tile-coupon3__footer">
                         <div class="c-pill c-club-tag c-tile-coupon3__pill">CLUB OFFER</div>
+                      </div>` : ''}
+                      ${inputData.newin ? `
+                      <div class="c-tile-coupon3__footer">
+                      <div class="c-pill c-pill--primary c-tile-coupon3__pill">New In</div></div>` : ''}
+                      ${inputData.backinstock ? `
+                      <div class="c-tile-coupon3__footer">
+                      <div class="c-pill c-pill--primary c-tile-coupon3__pill">All Sizes Back In Stock</div>
                       </div>` : ''}
                   </div>
               </article>
@@ -321,6 +352,13 @@ function HTMLGenerator (props) {
                       <div class="c-tile-coupon3__footer">
                         <div class="c-pill c-club-tag c-tile-coupon3__pill">CLUB OFFER</div>
                       </div>` : ''}
+                      ${inputData.newin ? `
+                      <div class="c-tile-coupon3__footer">
+                      <div class="c-pill c-pill--primary c-tile-coupon3__pill">New In</div></div>` : ''}
+                      ${inputData.backinstock ? `
+                      <div class="c-tile-coupon3__footer">
+                      <div class="c-pill c-pill--primary c-tile-coupon3__pill">All Sizes Back In Stock</div>
+                      </div>` : ''}
                   </div>
               </article>
           </div>
@@ -373,6 +411,13 @@ function HTMLGenerator (props) {
                       <div class="c-tile-coupon3__footer">
                         <div class="c-pill c-club-tag c-tile-coupon3__pill">CLUB OFFER</div>
                       </div>` : ''}
+                      ${inputData.newin ? `
+                      <div class="c-tile-coupon3__footer">
+                      <div class="c-pill c-pill--primary c-tile-coupon3__pill">New In</div></div>` : ''}
+                      ${inputData.backinstock ? `
+                      <div class="c-tile-coupon3__footer">
+                      <div class="c-pill c-pill--primary c-tile-coupon3__pill">All Sizes Back In Stock</div>
+                      </div>` : ''}
                   </div>
               </article>
           </div>
@@ -420,10 +465,17 @@ function HTMLGenerator (props) {
                                         inputData.white ? 'white' : 'black'} !important;">${inputData.excludes}</small></div>
                                     </div>
                                   </div>`: ''}
-                              </div> ${inputData.club ? `
-                              <div class="c-tile-coupon3__footer">
-                                <div class="c-pill c-club-tag c-tile-coupon3__pill">CLUB OFFER</div>
-                              </div>` : ''}
+                                  </div> ${inputData.club ? `
+                                  <div class="c-tile-coupon3__footer">
+                                    <div class="c-pill c-club-tag c-tile-coupon3__pill">CLUB OFFER</div>
+                                  </div>` : ''}
+                                  ${inputData.newin ? `
+                                  <div class="c-tile-coupon3__footer">
+                                  <div class="c-pill c-pill--primary c-tile-coupon3__pill">New In</div></div>` : ''}
+                                  ${inputData.backinstock ? `
+                                  <div class="c-tile-coupon3__footer">
+                                  <div class="c-pill c-pill--primary c-tile-coupon3__pill">All Sizes Back In Stock</div>
+                                  </div>` : ''}
                           </div>
                       </article>
                   </div>
@@ -468,10 +520,17 @@ function HTMLGenerator (props) {
                         inputData.white ? 'white' : 'black'} !important;">${inputData.excludes}</small></div>
                     </div>
                   </div>`: ''}
-                </div> ${inputData.club ? `
-                <div class="c-tile-coupon3__footer">
-                  <div class="c-pill c-club-tag c-tile-coupon3__pill">CLUB OFFER</div>
-                </div>` : ''}
+                  </div> ${inputData.club ? `
+                  <div class="c-tile-coupon3__footer">
+                    <div class="c-pill c-club-tag c-tile-coupon3__pill">CLUB OFFER</div>
+                  </div>` : ''}
+                  ${inputData.newin ? `
+                  <div class="c-tile-coupon3__footer">
+                  <div class="c-pill c-pill--primary c-tile-coupon3__pill">New In</div></div>` : ''}
+                  ${inputData.backinstock ? `
+                  <div class="c-tile-coupon3__footer">
+                  <div class="c-pill c-pill--primary c-tile-coupon3__pill">All Sizes Back In Stock</div>
+                  </div>` : ''}
             </div>
         </article>
       </div>
@@ -516,10 +575,17 @@ function HTMLGenerator (props) {
                       inputData.white ? 'white' : 'black'} !important;">${inputData.excludes}</small></div>
                   </div>
                 </div>`: ''}
-              </div> ${inputData.club ? `
-              <div class="c-tile-coupon3__footer">
-                <div class="c-pill c-club-tag c-tile-coupon3__pill">CLUB OFFER</div>
-              </div>` : ''}
+                </div> ${inputData.club ? `
+                <div class="c-tile-coupon3__footer">
+                  <div class="c-pill c-club-tag c-tile-coupon3__pill">CLUB OFFER</div>
+                </div>` : ''}
+                ${inputData.newin ? `
+                <div class="c-tile-coupon3__footer">
+                <div class="c-pill c-pill--primary c-tile-coupon3__pill">New In</div></div>` : ''}
+                ${inputData.backinstock ? `
+                <div class="c-tile-coupon3__footer">
+                <div class="c-pill c-pill--primary c-tile-coupon3__pill">All Sizes Back In Stock</div>
+                </div>` : ''}
           </div>
       </article>
     </div>
@@ -560,10 +626,17 @@ function HTMLGenerator (props) {
                     inputData.white ? 'white' : 'black'} !important;">${inputData.excludes}</small></div>
                 </div>
               </div>`: ''}
-            </div> ${inputData.club ? `
-            <div class="c-tile-coupon3__footer">
-              <div class="c-pill c-club-tag c-tile-coupon3__pill">CLUB OFFER</div>
-            </div>` : ''}
+              </div> ${inputData.club ? `
+              <div class="c-tile-coupon3__footer">
+                <div class="c-pill c-club-tag c-tile-coupon3__pill">CLUB OFFER</div>
+              </div>` : ''}
+              ${inputData.newin ? `
+              <div class="c-tile-coupon3__footer">
+              <div class="c-pill c-pill--primary c-tile-coupon3__pill">New In</div></div>` : ''}
+              ${inputData.backinstock ? `
+              <div class="c-tile-coupon3__footer">
+              <div class="c-pill c-pill--primary c-tile-coupon3__pill">All Sizes Back In Stock</div>
+              </div>` : ''}
         </div>
       </article>
     </div>
@@ -604,10 +677,17 @@ function HTMLGenerator (props) {
                   inputData.white ? 'white' : 'black'} !important;">${inputData.excludes}</small></div>
               </div>
             </div>`: ''}
-          </div> ${inputData.club ? `
-          <div class="c-tile-coupon3__footer">
-            <div class="c-pill c-club-tag c-tile-coupon3__pill">CLUB OFFER</div>
-          </div>` : ''}
+            </div> ${inputData.club ? `
+            <div class="c-tile-coupon3__footer">
+              <div class="c-pill c-club-tag c-tile-coupon3__pill">CLUB OFFER</div>
+            </div>` : ''}
+            ${inputData.newin ? `
+            <div class="c-tile-coupon3__footer">
+            <div class="c-pill c-pill--primary c-tile-coupon3__pill">New In</div></div>` : ''}
+            ${inputData.backinstock ? `
+            <div class="c-tile-coupon3__footer">
+            <div class="c-pill c-pill--primary c-tile-coupon3__pill">All Sizes Back In Stock</div>
+            </div>` : ''}
       </div>
     </article>
   </div>
@@ -639,7 +719,7 @@ function HTMLGenerator (props) {
 
                 </div>
             </div>
-            ${inputData.excludes ? `<div class="c-lockup">
+            ${inputData.excludes ? `<div class="c-lockup"> 
             <div class="c-lockup__price-title mt-1">
               <div class="u-flex-justify-center c-lockup__label u-uppercase" style="color:${
                 inputData.white ? 'white' : 'black'} !important;"><small contenteditable="false" style="color:${
@@ -649,6 +729,13 @@ function HTMLGenerator (props) {
         </div> ${inputData.club ? `
         <div class="c-tile-coupon3__footer">
           <div class="c-pill c-club-tag c-tile-coupon3__pill">CLUB OFFER</div>
+        </div>` : ''}
+        ${inputData.newin ? `
+        <div class="c-tile-coupon3__footer">
+        <div class="c-pill c-pill--primary c-tile-coupon3__pill">New In</div></div>` : ''}
+        ${inputData.backinstock ? `
+        <div class="c-tile-coupon3__footer">
+        <div class="c-pill c-pill--primary c-tile-coupon3__pill">All Sizes Back In Stock</div>
         </div>` : ''}
     </div>
   </article>
@@ -728,10 +815,10 @@ function HTMLGenerator (props) {
           setInputData({ ...inputData, excludes: userInput.target.value })
         }}
       />
-      <GenerateButton onButtonClick={handleGenerate} />
+     
       <FormControlLabel
         labelPlacement='start'
-        className='checkboxClub'
+        className='checkbox'
         control={
           <Checkbox
             sx={{
@@ -746,9 +833,45 @@ function HTMLGenerator (props) {
           setInputData({ ...inputData, club: event.target.checked })
         }}
       />
+ 
       <FormControlLabel
         labelPlacement='start'
-        className='checkboxColor'
+        className='checkbox'
+        control={
+          <Checkbox
+            sx={{
+              color: grey[900],
+              '& .MuiSvgIcon-root': { fontSize: 30, color: grey[900] }
+            }}
+          />
+        }
+        label='New in?'
+        checked={inputData.newin}
+        onChange={event => {
+          setInputData({ ...inputData, newin: event.target.checked })
+        }}
+      />
+       <FormControlLabel
+        labelPlacement='start'
+        className='checkbox'
+        control={
+          <Checkbox
+            sx={{
+              color: grey[900],
+              '& .MuiSvgIcon-root': { fontSize: 30, color: grey[900] }
+            }}
+          />
+        }
+        label='Back in Stock?'
+        checked={inputData.backinstock}
+        onChange={event => {
+          setInputData({ ...inputData, backinstock: event.target.checked })
+        }}
+        
+      />
+           <FormControlLabel
+        labelPlacement='start'
+        className='checkbox'
         control={
           <Checkbox
             sx={{
@@ -763,7 +886,10 @@ function HTMLGenerator (props) {
           setInputData({ ...inputData, white: event.target.checked })
         }}
       />
+      <br></br> <br></br>
+      <GenerateButton onButtonClick={handleGenerate} />
       <Outputbox output={output} />
+      
     </>
   )
 }

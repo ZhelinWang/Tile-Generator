@@ -110,16 +110,21 @@ img {
   left: 770px;
 }
 
-.checkboxClub {
+.checkbox {
   position: relative;
   margin: 5px auto;
   bottom: -3px;
-  left: 840px;
+  left: 715px;
 }
 
-.checkboxColor {
+.c-pill--primary {
+  background-color: #00b398;
+  color: #fff;
+}
+
+/* .checkboxColor {
   position: relative;
   margin: 5px auto;
   bottom: -3px;
   left: 850px;
-}
+} */
