@@ -123,7 +123,7 @@ function HTMLGenerator (props) {
     <div class="u-columns__column u-columns__column--six-s todo-item lmdd-block u-columns__column--three-l">
     <article class="c-tile__wrap u-light-mode"><a href="${inputData.picklistURL}" aria-hidden="true" data-twg-id="" class="c-tile__link promo_box">${inputData.title}
     </a>
-        <div class="c-tile-top u-bg-white c-tile c-tile-coupon2 u-aspect-nine-by-eight u-aspect-eight-by-nine-m">
+        <div class="c-tile-top u-bg-white c-tile u-aspect-nine-by-eight u-aspect-eight-by-nine-m">
             <div class="c-tile-coupon3__image" style="background-image: url(&quot;${inputData.imageURL.length > 53 ? inputData.imageURL : "https://www.torpedo7.co.nz" + inputData.imageURL}&quot;);"><br></div>
             <div class="c-tile-coupon3__content-wrap">
                 <div class="c-tile-coupon3__content ">
@@ -164,7 +164,6 @@ function HTMLGenerator (props) {
                               </div>
                               <!---->
                           </div>
-                      </div>
                       <!---->
                       ${inputData.club ? `
                       <div class="c-tile-coupon3__footer">
@@ -185,7 +184,7 @@ function HTMLGenerator (props) {
     <div class="u-columns__column u-columns__column--six-s todo-item lmdd-block u-columns__column--three-l">
     <article class="c-tile__wrap u-light-mode"><a href="${inputData.picklistURL}" aria-hidden="true" data-twg-id="" class="c-tile__link promo_box">${inputData.title}
     </a>
-        <div class="c-tile-top u-bg-white c-tile c-tile-coupon2 u-aspect-nine-by-eight u-aspect-eight-by-nine-m">
+        <div class="c-tile-top u-bg-white c-tile u-aspect-nine-by-eight u-aspect-eight-by-nine-m">
             <div class="c-tile-coupon3__image" style="background-image: url(&quot;${inputData.imageURL.length > 53 ? inputData.imageURL : "https://www.torpedo7.co.nz" + inputData.imageURL}&quot;);"><br></div>
             <div class="c-tile-coupon3__content-wrap">
                 <div class="c-tile-coupon3__content ">
@@ -226,7 +225,7 @@ function HTMLGenerator (props) {
                               </div>
                               <!---->
                           </div>
-                      </div>
+                    
                       <!---->
                       ${inputData.club ? `
                       <div class="c-tile-coupon3__footer">
@@ -247,7 +246,7 @@ function HTMLGenerator (props) {
     <div class="u-columns__column u-columns__column--six-s todo-item lmdd-block u-columns__column--three-l">
     <article class="c-tile__wrap u-light-mode"><a href="${inputData.picklistURL}" aria-hidden="true" data-twg-id="" class="c-tile__link promo_box">${inputData.title}
     </a>
-        <div class="c-tile-top u-bg-white c-tile c-tile-coupon2 u-aspect-nine-by-eight u-aspect-eight-by-nine-m">
+        <div class="c-tile-top u-bg-white c-tile u-aspect-nine-by-eight u-aspect-eight-by-nine-m">
             <div class="c-tile-coupon3__image" style="background-image: url(&quot;${inputData.imageURL.length > 53 ? inputData.imageURL : "https://www.torpedo7.co.nz" + inputData.imageURL}&quot;);"><br></div>
             <div class="c-tile-coupon3__content-wrap">
                 <div class="c-tile-coupon3__content ">
@@ -307,7 +306,7 @@ function HTMLGenerator (props) {
     <div class="u-columns__column u-columns__column--six-s todo-item lmdd-block u-columns__column--three-l">
     <article class="c-tile__wrap u-light-mode"><a href="${inputData.picklistURL}" aria-hidden="true" data-twg-id="" class="c-tile__link promo_box">${inputData.title}
     </a>
-        <div class="c-tile-top u-bg-white c-tile c-tile-coupon2 u-aspect-nine-by-eight u-aspect-eight-by-nine-m">
+        <div class="c-tile-top u-bg-white c-tile u-aspect-nine-by-eight u-aspect-eight-by-nine-m">
             <div class="c-tile-coupon3__image" style="background-image: url(&quot;${inputData.imageURL.length > 53 ? inputData.imageURL : "https://www.torpedo7.co.nz" + inputData.imageURL}&quot;);"><br></div>
             <div class="c-tile-coupon3__content-wrap">
                 <div class="c-tile-coupon3__content ">
@@ -367,7 +366,7 @@ function HTMLGenerator (props) {
     <div class="u-columns__column u-columns__column--six-s todo-item lmdd-block u-columns__column--three-l">
     <article class="c-tile__wrap u-light-mode"><a href="${inputData.picklistURL}" aria-hidden="true" data-twg-id="" class="c-tile__link promo_box">${inputData.title}
     </a>
-        <div class="c-tile-top u-bg-white c-tile c-tile-coupon2 u-aspect-nine-by-eight u-aspect-eight-by-nine-m">
+        <div class="c-tile-top u-bg-white c-tile u-aspect-nine-by-eight u-aspect-eight-by-nine-m">
             <div class="c-tile-coupon3__image" style="background-image: url(&quot;${inputData.imageURL.length > 53 ? inputData.imageURL : "https://www.torpedo7.co.nz" + inputData.imageURL}&quot;);"><br></div>
             <div class="c-tile-coupon3__content-wrap">
                 <div class="c-tile-coupon3__content ">
@@ -432,7 +431,7 @@ function HTMLGenerator (props) {
     inputData.selectedDeal == "Item X% Off" ? `
                   <div class="u-columns__column u-columns__column--six-s todo-item lmdd-block u-columns__column--six-l">
                       <article class="c-tile__wrap u-light-mode"><a href="${inputData.picklistURL}" aria-hidden="true" data-twg-id="" class="c-tile__link promo_box">${inputData.title}</a>
-                          <div class="c-tile-top u-bg-white c-tile c-tile-coupon2 u-aspect-nine-by-eight u-aspect-eight-by-nine-m u-aspect-sixteen-by-nine-l">
+                          <div class="c-tile-top u-bg-white c-tile u-aspect-nine-by-eight u-aspect-eight-by-nine-m u-aspect-sixteen-by-nine-l">
                               <div class="c-tile-coupon3__image" style="background-image: url(&quot;${inputData.imageURL.length > 53 ? inputData.imageURL : "https://www.torpedo7.co.nz" + inputData.imageURL}&quot;);"><br></div>
                               <div class="c-tile-coupon3__content-wrap">
                                   <div class="c-tile-coupon3__content ">
@@ -482,7 +481,7 @@ function HTMLGenerator (props) {
   ` : inputData.selectedDeal == 'Item upto X% Off' ? `
         <div class="u-columns__column u-columns__column--six-s todo-item lmdd-block u-columns__column--six-l">
         <article class="c-tile__wrap u-light-mode"><a href="${inputData.picklistURL}" aria-hidden="true" data-twg-id="" class="c-tile__link promo_box">${inputData.title}</a>
-            <div class="c-tile-top u-bg-white c-tile c-tile-coupon2 u-aspect-nine-by-eight u-aspect-eight-by-nine-m u-aspect-sixteen-by-nine-l">
+            <div class="c-tile-top u-bg-white c-tile u-aspect-nine-by-eight u-aspect-eight-by-nine-m u-aspect-sixteen-by-nine-l">
                 <div class="c-tile-coupon3__image" style="background-image: url(&quot;${inputData.imageURL.length > 53 ? inputData.imageURL : "https://www.torpedo7.co.nz" + inputData.imageURL}&quot;);"><br></div>
                 <div class="c-tile-coupon3__content-wrap">
                     <div class="c-tile-coupon3__content ">
@@ -537,7 +536,7 @@ function HTMLGenerator (props) {
   ` : inputData.selectedDeal == 'Buy X get Y% Off' ? `
       <div class="u-columns__column u-columns__column--six-s todo-item lmdd-block u-columns__column--six-l">
       <article class="c-tile__wrap u-light-mode"><a href="${inputData.picklistURL}" aria-hidden="true" data-twg-id="" class="c-tile__link promo_box">${inputData.title}</a>
-          <div class="c-tile-top u-bg-white c-tile c-tile-coupon2 u-aspect-nine-by-eight u-aspect-eight-by-nine-m u-aspect-sixteen-by-nine-l">
+          <div class="c-tile-top u-bg-white c-tile u-aspect-nine-by-eight u-aspect-eight-by-nine-m u-aspect-sixteen-by-nine-l">
               <div class="c-tile-coupon3__image" style="background-image: url(&quot;${inputData.imageURL.length > 53 ? inputData.imageURL : "https://www.torpedo7.co.nz" + inputData.imageURL}&quot;);"><br></div>
               <div class="c-tile-coupon3__content-wrap">
                   <div class="c-tile-coupon3__content ">
@@ -592,7 +591,7 @@ function HTMLGenerator (props) {
   ` : inputData.selectedDeal == 'Buy X get Y Half Price' ? `
     <div class="u-columns__column u-columns__column--six-s todo-item lmdd-block u-columns__column--six-l">
     <article class="c-tile__wrap u-light-mode"><a href="${inputData.picklistURL}" aria-hidden="true" data-twg-id="" class="c-tile__link promo_box">${inputData.title}</a>
-        <div class="c-tile-top u-bg-white c-tile c-tile-coupon2 u-aspect-nine-by-eight u-aspect-eight-by-nine-m u-aspect-sixteen-by-nine-l">
+        <div class="c-tile-top u-bg-white c-tile u-aspect-nine-by-eight u-aspect-eight-by-nine-m u-aspect-sixteen-by-nine-l">
             <div class="c-tile-coupon3__image" style="background-image: url(&quot;${inputData.imageURL.length > 53 ? inputData.imageURL : "https://www.torpedo7.co.nz" + inputData.imageURL}&quot;);"><br></div>
             <div class="c-tile-coupon3__content-wrap">
                 <div class="c-tile-coupon3__content ">
@@ -643,7 +642,7 @@ function HTMLGenerator (props) {
   ` : inputData.selectedDeal == 'Buy X get Y Free' ? `
   <div class="u-columns__column u-columns__column--six-s todo-item lmdd-block u-columns__column--six-l">
   <article class="c-tile__wrap u-light-mode"><a href="${inputData.picklistURL}" aria-hidden="true" data-twg-id="" class="c-tile__link promo_box">${inputData.title}</a>
-      <div class="c-tile-top u-bg-white c-tile c-tile-coupon2 u-aspect-nine-by-eight u-aspect-eight-by-nine-m u-aspect-sixteen-by-nine-l">
+      <div class="c-tile-top u-bg-white c-tile u-aspect-nine-by-eight u-aspect-eight-by-nine-m u-aspect-sixteen-by-nine-l">
           <div class="c-tile-coupon3__image" style="background-image: url(&quot;${inputData.imageURL.length > 53 ? inputData.imageURL : "https://www.torpedo7.co.nz" + inputData.imageURL}&quot;);"><br></div>
           <div class="c-tile-coupon3__content-wrap">
               <div class="c-tile-coupon3__content ">
@@ -694,7 +693,7 @@ function HTMLGenerator (props) {
 ` : inputData.selectedDeal == 'Was X, Save $Y' ? ` 
 <div class="u-columns__column u-columns__column--six-s todo-item lmdd-block u-columns__column--six-l">
 <article class="c-tile__wrap u-light-mode"><a href="${inputData.picklistURL}" aria-hidden="true" data-twg-id="" class="c-tile__link promo_box">${inputData.title}</a>
-    <div class="c-tile-top u-bg-white c-tile c-tile-coupon2 u-aspect-nine-by-eight u-aspect-eight-by-nine-m u-aspect-sixteen-by-nine-l">
+    <div class="c-tile-top u-bg-white c-tile u-aspect-nine-by-eight u-aspect-eight-by-nine-m u-aspect-sixteen-by-nine-l">
         <div class="c-tile-coupon3__image" style="background-image: url(&quot;${inputData.imageURL.length > 53 ? inputData.imageURL : "https://www.torpedo7.co.nz" + inputData.imageURL}&quot;);"><br></div>
         <div class="c-tile-coupon3__content-wrap">
             <div class="c-tile-coupon3__content ">
