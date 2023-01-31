@@ -17,12 +17,8 @@ function Navbar () {
   return (
     <ThemeProvider theme={darkTheme}>
       <AppBar
-        position='static'
         color='primary'
         sx={{
-          display: 'flex',
-          flexDirection: { xs: 'column', md: 'row' },
-          alignItems: 'center',
           bgcolor: 'background.paper',
           overflow: 'hidden',
           boxShadow: 1,
@@ -30,11 +26,13 @@ function Navbar () {
           height: '180px'
         }}
       >
-        <Toolbar>
-          <a href= "https://t7-webtile-generator.netlify.app/">
-          <img src='/images/logo.svg' alt='T7 Logo' />
+
+          <a href= "https://t7-webtile-generator.netlify.app/" className='image-container'>
+            <img src='/images/logo.svg' alt='T7 Logo' />
           </a>
-        </Toolbar>
+
+
+
       </AppBar>
     </ThemeProvider>
   )
