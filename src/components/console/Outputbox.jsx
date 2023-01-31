@@ -4,22 +4,16 @@ import TextField from '@mui/material/TextField'
 
 function Outputbox (props) {
   return (
-    
+    <>
+    <div className='generateSpacingTop'></div>
     <Box
-    
-      style={{ width: 1200 }}
-      sx={{
-
-        position: 'relative',
-        left: '20%',
-      }}
     >
       <p>{["<!-- {tile starts here...} -->"]}</p>
       <br/>{props.output}
       <p><br/>{["<!-- {tile ends here...} -->"]}</p>
       
     </Box>
-
+    </>
   )
 }
 

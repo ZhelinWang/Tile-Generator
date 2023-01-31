@@ -1,0 +1,12 @@
+.inputFields {
+ width: 400px;
+ margin: 8px auto;
+   
+}
+
+@media only screen and (max-width: 600px) {
+    .inputFields {
+      width: 300px;
+      margin: 8px auto;
+    }
+  }

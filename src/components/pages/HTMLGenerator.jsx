@@ -9,6 +9,7 @@ import InputFields from '../textinput/InputFields'
 import FormControlLabel from '@mui/material/FormControlLabel'
 import Checkbox from '@mui/material/Checkbox'
 import { grey } from '@mui/material/colors'
+import './HTMLGenerator.css'
 
 
 function roundToTwo(num) {
@@ -36,6 +37,7 @@ function HTMLGenerator (props) {
 
   async function handleGenerate () {
     console.log(inputData.selectedDeal)
+
     let generatedHTML = ""
     console.log(inputData)
     switch(inputData.selectedTile) {
@@ -428,10 +430,8 @@ function HTMLGenerator (props) {
   }
 
   return (
-    <>
-      <br />
+    <center style={{padding: "1rem"}}>
       <Dropdown
-        style={{ zIndex: '10' }}
         options={['Large Tile', 'Small Tile', 'Banner']}
         selected={inputData.selectedTile}
         onSelected={selectedItem => {
@@ -508,14 +508,14 @@ function HTMLGenerator (props) {
         className='checkbox'
         control={
           <Checkbox
-            sx={{
-              color: grey[900],
-              '& .MuiSvgIcon-root': { fontSize: 30, color: grey[900] }
-            }}
           />
         }
         label='Club?'
         checked={inputData.club}
+        sx={{
+          color: grey[900],
+          '& .MuiSvgIcon-root': { fontSize: 30, color: grey[900] }
+        }}
         onChange={event => {
           setInputData({ ...inputData, club: event.target.checked })
         }}
@@ -526,14 +526,14 @@ function HTMLGenerator (props) {
         className='checkbox'
         control={
           <Checkbox
-            sx={{
-              color: grey[900],
-              '& .MuiSvgIcon-root': { fontSize: 30, color: grey[900] }
-            }}
           />
         }
         label='New in?'
         checked={inputData.newin}
+        sx={{
+          color: grey[900],
+          '& .MuiSvgIcon-root': { fontSize: 30, color: grey[900] }
+        }}
         onChange={event => {
           setInputData({ ...inputData, newin: event.target.checked })
         }}
@@ -543,14 +543,14 @@ function HTMLGenerator (props) {
         className='checkbox'
         control={
           <Checkbox
-            sx={{
-              color: grey[900],
-              '& .MuiSvgIcon-root': { fontSize: 30, color: grey[900] }
-            }}
           />
         }
         label='Back in Stock?'
         checked={inputData.backinstock}
+        sx={{
+          color: grey[900],
+          '& .MuiSvgIcon-root': { fontSize: 30, color: grey[900] }
+        }}
         onChange={event => {
           setInputData({ ...inputData, backinstock: event.target.checked })
         }}
@@ -561,23 +561,29 @@ function HTMLGenerator (props) {
         className='checkbox'
         control={
           <Checkbox
-            sx={{
-              color: grey[900],
-              '& .MuiSvgIcon-root': { fontSize: 30, color: grey[900] }
-            }}
           />
         }
         label='White?'
         checked={inputData.white}
+        sx={{
+          color: grey[900],
+          '& .MuiSvgIcon-root': { fontSize: 30, color: grey[900] }
+        }}
         onChange={event => {
           setInputData({ ...inputData, white: event.target.checked })
         }}
       />
-      <br></br> <br></br>
+      <hr></hr>
       <GenerateButton onButtonClick={handleGenerate} />
+      <button className='copyButton'
+        onClick={() =>  
+        navigator.clipboard.writeText(output) && alert('Output Copied to Clipboard')
+        }
+      >
+        Copy Output
+      </button>
       <Outputbox output={output} />
-      
-    </>
+    </center>
   )
 }
 

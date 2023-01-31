@@ -1,8 +1,7 @@
 import * as React from 'react'
 import AppBar from '@mui/material/AppBar'
-import Toolbar from '@mui/material/Toolbar'
-import { IconButton } from '@mui/material'
 import { ThemeProvider, createTheme } from '@mui/material/styles'
+import './Navbar.css'
 
 const darkTheme = createTheme({
   palette: {
@@ -16,23 +15,16 @@ const darkTheme = createTheme({
 function Navbar () {
   return (
     <ThemeProvider theme={darkTheme}>
-      <AppBar
-        color='primary'
-        sx={{
-          bgcolor: 'background.paper',
-          overflow: 'hidden',
-          boxShadow: 1,
-          fontWeight: 'bold',
-          height: '180px'
-        }}
-      >
-
-          <a href= "https://t7-webtile-generator.netlify.app/" className='image-container'>
-            <img src='/images/logo.svg' alt='T7 Logo' />
+      <AppBar sx={{position: "relative"}}>
+        <center>
+          <a href={window.location.host}>
+            <img
+              className='image-container'
+              src='/images/logo.svg'
+              alt='T7 Logo'
+            />
           </a>
-
-
-
+        </center>
       </AppBar>
     </ThemeProvider>
   )

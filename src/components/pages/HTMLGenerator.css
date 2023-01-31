@@ -1,0 +1,13 @@
+.checkbox {
+    display: block;
+    padding: 0.5rem 1rem 0rem 0rem;
+    /* position: relative */
+}
+
+body {
+    background: #fcf9f9;
+  } 
+
+/* .copyButton {
+    display: none;
+} */

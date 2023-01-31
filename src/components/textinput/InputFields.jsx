@@ -1,6 +1,7 @@
 import * as React from 'react'
 import TextField from '@mui/material/TextField'
 import { withTheme } from '@emotion/react'
+import './InputFields.css'
 
 function InputFields ({ placeholder, onKeyTyped, value, labelText }) {
   return (
@@ -15,8 +16,8 @@ function InputFields ({ placeholder, onKeyTyped, value, labelText }) {
           variant='outlined'
           label={labelText}
           sx={{
-            width: '400px',
-            margin: '5px auto',
+         
+            margin: '8px auto',
             backgroundColor: 'white'
           }}
         />
