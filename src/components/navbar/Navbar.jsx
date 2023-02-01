@@ -17,7 +17,7 @@ function Navbar () {
     <ThemeProvider theme={darkTheme}>
       <AppBar sx={{position: "relative"}}>
         <center>
-          <a href='https://t7-webtile-generator.netlify.app'/>
+          <a href='https://t7-webtile-generator.netlify.app'>
             <img
               className='image-container'
               src='/images/logo.svg'
