@@ -577,7 +577,7 @@ function HTMLGenerator (props) {
       <GenerateButton onButtonClick={handleGenerate} />
       <button className='copyButton'
         onClick={() =>  
-        navigator.clipboard.writeText(output.replaceAll("\\s+", " ")) && alert('Output Copied to Clipboard')
+        navigator.clipboard.writeText(output.replace(/^\s+|\s+$/gm,'')) && alert('Output Copied to Clipboard')
         }
       >
         Copy Output
