@@ -5,14 +5,15 @@ import TextField from '@mui/material/TextField'
 function Outputbox (props) {
   return (
     <>
-    <div className='generateSpacingTop'></div>
-    <Box
-    >
-      <p>{["<!-- {tile starts here...} -->"]}</p>
-      <br/>{props.output}
-      <p><br/>{["<!-- {tile ends here...} -->"]}</p>
-      
-    </Box>
+      <div className='generateSpacingTop'></div>
+      <Box>
+        <p></p>
+        <br />
+        {props.output}
+        <p>
+          <br />
+        </p>
+      </Box>
     </>
   )
 }
