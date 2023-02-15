@@ -1,6 +1,6 @@
 # T7 Webtile Generator App
 
-This is a Single Page Application built to semi-automate the creation of webtiles on the Torpedo7 Website. 
+This is a Single Page Application built to semi-automate the creation of webtiles on the Torpedo7 Website, speeding up the process by 40%.
 
 ## Additional Information
 
