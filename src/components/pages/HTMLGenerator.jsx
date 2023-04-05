@@ -76,9 +76,9 @@ function HTMLGenerator (props) {
     }  
           <article class="c-tile__wrap u-light-mode"><a href="${
             inputData.picklistURL
-          }" aria-hidden="true" data-twg-id="${title}" class="c-tile__link promo_box">${
+          }" aria-hidden="true" data-twg-id="${
             inputData.title
-          }
+          }" class="c-tile__link promo_box">${inputData.title}
           </a>
           ${
             inputData.selectedTile == 'Small Tile'
@@ -183,9 +183,9 @@ function HTMLGenerator (props) {
     }  
     <article class="c-tile__wrap u-light-mode"><a href="${
       inputData.picklistURL
-    }" aria-hidden="true" data-twg-id="${title}" class="c-tile__link promo_box">${
+    }" aria-hidden="true" data-twg-id="${
             inputData.title
-          }
+          }" class="c-tile__link promo_box">${inputData.title}
     </a>
     ${
       inputData.selectedTile == 'Small Tile'
@@ -295,9 +295,9 @@ function HTMLGenerator (props) {
     }  
     <article class="c-tile__wrap u-light-mode"><a href="${
       inputData.picklistURL
-    }" aria-hidden="true" data-twg-id="${title}" class="c-tile__link promo_box">${
+    }" aria-hidden="true" data-twg-id="${
             inputData.title
-          }
+          }" class="c-tile__link promo_box">${inputData.title}
     </a>
     ${
       inputData.selectedTile == 'Small Tile'
@@ -408,9 +408,9 @@ function HTMLGenerator (props) {
     }  
     <article class="c-tile__wrap u-light-mode"><a href="${
       inputData.picklistURL
-    }" aria-hidden="true" data-twg-id="${title}" class="c-tile__link promo_box">${
+    }" aria-hidden="true" data-twg-id="${
             inputData.title
-          }
+          }" class="c-tile__link promo_box">${inputData.title}
     </a>
     ${
       inputData.selectedTile == 'Small Tile'
@@ -519,9 +519,9 @@ function HTMLGenerator (props) {
     }  
     <article class="c-tile__wrap u-light-mode"><a href="${
       inputData.picklistURL
-    }" aria-hidden="true" data-twg-id="${title}" class="c-tile__link promo_box">${
+    }" aria-hidden="true" data-twg-id="${
             inputData.title
-          }
+          }" class="c-tile__link promo_box">${inputData.title}
     </a>
     ${
       inputData.selectedTile == 'Small Tile'
@@ -630,9 +630,9 @@ function HTMLGenerator (props) {
     }  
     <article class="c-tile__wrap u-light-mode"><a href="${
       inputData.picklistURL
-    }" aria-hidden="true" data-twg-id="${title}" class="c-tile__link promo_box">${
+    }" aria-hidden="true" data-twg-id="${
             inputData.title
-          }
+          }" class="c-tile__link promo_box">${inputData.title}
     </a> 
     ${
       inputData.selectedTile == 'Small Tile'
@@ -741,9 +741,9 @@ ${
 }  
 <article class="c-tile__wrap u-light-mode"><a href="${
             inputData.picklistURL
-          }" aria-hidden="true" data-twg-id="${title}" class="c-tile__link promo_box">${
+          }" aria-hidden="true" data-twg-id="${
             inputData.title
-          }
+          }" class="c-tile__link promo_box">${inputData.title}
 </a> 
 ${
   inputData.selectedTile == 'Small Tile'
