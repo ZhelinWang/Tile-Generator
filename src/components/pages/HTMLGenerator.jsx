@@ -766,23 +766,19 @@ ${
                   <div class="c-tile-coupon3__offer">
                   <div class="c-lockup">
                       <div class="c-lockup__price-title">
-                        <div class="c-card-promo-product3__price-old">$${
-                          inputData.x
-                        }</div>
+                        <div class="c-card-promo-product3__price-old"></div>
                         <div class="c-card-promo-product3__offer" style="color:${
                           inputData.white ? 'white' : 'black'
-                        } !important;">SAVE $${inputData.y}</div>
+                        } !important;"></div>
                       </div>
                       <div class="u-flex-column">
                           <div class="u-flex">
                           <div class="c-card-promo-product3__price-dollars" style="color:${
                             inputData.white ? 'white' : 'black'
-                          } !important;">$</div>
+                          } !important;"></div>
                           <div class="c-card-promo-product3__price" style="color:${
                             inputData.white ? 'white' : 'black'
-                          } !important;">${roundToTwo(
-            inputData.x - inputData.y
-          )}
+                          } !important;">
                             </div>
                           
           
