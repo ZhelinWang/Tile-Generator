@@ -9,19 +9,18 @@ function InputFields ({ placeholder, onKeyTyped, value, labelText }) {
       <div>
         <TextField
           className='inputFields'
-            // required label='Required'
+          // required label='Required'
           value={value}
           onChange={onKeyTyped}
           placeholder={placeholder}
           variant='outlined'
           label={labelText}
           sx={{
-         
             margin: '8px auto',
             backgroundColor: 'white'
           }}
         />
-      </div>  
+      </div>
     </>
   )
 }

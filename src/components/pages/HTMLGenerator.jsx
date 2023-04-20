@@ -22,7 +22,8 @@ function HTMLGenerator (props) {
     title: '',
     imageURL: '',
     picklistURL: '',
-    club: false,
+    everydayclub: false,
+    cluboffer: false,
     newin: '',
     backinstock: '',
     white: false,
@@ -146,10 +147,18 @@ function HTMLGenerator (props) {
                   </div>
                   <!---->
                   ${
-                    inputData.club
+                    inputData.everydayclub
                       ? `
                   <div class="c-tile-coupon3__footer">
-                    <div class="c-pill c-club-tag c-tile-coupon3__pill">CLUB OFFER</div>
+                    <div class="c-pill c-club-tag c-tile-coupon3__pill">EVERYDAY CLUB OFFER</div>
+                  </div>`
+                      : ''
+                  }
+                  ${
+                    inputData.cluboffer
+                      ? `
+                  <div class="c-tile-coupon3__footer">
+                    <div class="c-pill c-club-tag c-tile-coupon3__pill hotclubdeal">HOT CLUB DEAL</div>
                   </div>`
                       : ''
                   }
@@ -257,10 +266,18 @@ function HTMLGenerator (props) {
                           </div>
                       <!---->
                       ${
-                        inputData.club
+                        inputData.everydayclub
                           ? `
                       <div class="c-tile-coupon3__footer">
-                        <div class="c-pill c-club-tag c-tile-coupon3__pill">CLUB OFFER</div>
+                        <div class="c-pill c-club-tag c-tile-coupon3__pill">EVERYDAY CLUB OFFER</div>
+                      </div>`
+                          : ''
+                      }
+                      ${
+                        inputData.cluboffer
+                          ? `
+                      <div class="c-tile-coupon3__footer">
+                        <div class="c-pill c-club-tag c-tile-coupon3__pill hotclubdeal">HOT CLUB DEAL</div>
                       </div>`
                           : ''
                       }
@@ -370,10 +387,18 @@ function HTMLGenerator (props) {
                     
                       <!---->
                       ${
-                        inputData.club
+                        inputData.everydayclub
                           ? `
                       <div class="c-tile-coupon3__footer">
-                        <div class="c-pill c-club-tag c-tile-coupon3__pill">CLUB OFFER</div>
+                        <div class="c-pill c-club-tag c-tile-coupon3__pill">EVERYDAY CLUB OFFER</div>
+                      </div>`
+                          : ''
+                      }
+                      ${
+                        inputData.cluboffer
+                          ? `
+                      <div class="c-tile-coupon3__footer">
+                        <div class="c-pill c-club-tag c-tile-coupon3__pill hotclubdeal">HOT CLUB DEAL</div>
                       </div>`
                           : ''
                       }
@@ -481,10 +506,18 @@ function HTMLGenerator (props) {
                       </div>
                       <!---->
                       ${
-                        inputData.club
+                        inputData.everydayclub
                           ? `
                       <div class="c-tile-coupon3__footer">
-                        <div class="c-pill c-club-tag c-tile-coupon3__pill">CLUB OFFER</div>
+                        <div class="c-pill c-club-tag c-tile-coupon3__pill">EVERYDAY CLUB OFFER</div>
+                      </div>`
+                          : ''
+                      }
+                      ${
+                        inputData.cluboffer
+                          ? `
+                      <div class="c-tile-coupon3__footer">
+                        <div class="c-pill c-club-tag c-tile-coupon3__pill hotclubdeal">HOT CLUB DEAL</div>
                       </div>`
                           : ''
                       }
@@ -592,10 +625,18 @@ function HTMLGenerator (props) {
                       </div>
                       <!---->
                       ${
-                        inputData.club
+                        inputData.everydayclub
                           ? `
                       <div class="c-tile-coupon3__footer">
-                        <div class="c-pill c-club-tag c-tile-coupon3__pill">CLUB OFFER</div>
+                        <div class="c-pill c-club-tag c-tile-coupon3__pill">EVERYDAY CLUB OFFER</div>
+                      </div>`
+                          : ''
+                      }
+                      ${
+                        inputData.cluboffer
+                          ? `
+                      <div class="c-tile-coupon3__footer">
+                        <div class="c-pill c-club-tag c-tile-coupon3__pill hotclubdeal">HOT CLUB DEAL</div>
                       </div>`
                           : ''
                       }
@@ -703,10 +744,18 @@ function HTMLGenerator (props) {
                       </div>
                       <!---->
                       ${
-                        inputData.club
+                        inputData.everydayclub
                           ? `
                       <div class="c-tile-coupon3__footer">
-                        <div class="c-pill c-club-tag c-tile-coupon3__pill">CLUB OFFER</div>
+                        <div class="c-pill c-club-tag c-tile-coupon3__pill">EVERYDAY CLUB OFFER</div>
+                      </div>`
+                          : ''
+                      }
+                      ${
+                        inputData.cluboffer
+                          ? `
+                      <div class="c-tile-coupon3__footer">
+                        <div class="c-pill c-club-tag c-tile-coupon3__pill hotclubdeal">HOT CLUB DEAL</div>
                       </div>`
                           : ''
                       }
@@ -808,10 +857,18 @@ ${
                   </div>
                   <!---->
                   ${
-                    inputData.club
+                    inputData.everydayclub
                       ? `
                   <div class="c-tile-coupon3__footer">
-                    <div class="c-pill c-club-tag c-tile-coupon3__pill">CLUB OFFER</div>
+                    <div class="c-pill c-club-tag c-tile-coupon3__pill">EVERYDAY CLUB OFFER</div>
+                  </div>`
+                      : ''
+                  }
+                  ${
+                    inputData.cluboffer
+                      ? `
+                  <div class="c-tile-coupon3__footer">
+                    <div class="c-pill c-club-tag c-tile-coupon3__pill hotclubdeal">HOT CLUB DEAL</div>
                   </div>`
                       : ''
                   }
@@ -915,25 +972,40 @@ ${
       />
 
       <FormControlLabel
-        labelPlacement='start'
+        labelPlacement='bottom'
         className='checkbox'
         control={<Checkbox />}
-        label='Club?'
-        checked={inputData.club}
+        label='Everyday Club'
+        checked={inputData.everydayclub}
         sx={{
           color: grey[900],
           '& .MuiSvgIcon-root': { fontSize: 30, color: grey[900] }
         }}
         onChange={event => {
-          setInputData({ ...inputData, club: event.target.checked })
+          setInputData({ ...inputData, everydayclub: event.target.checked })
         }}
       />
 
       <FormControlLabel
-        labelPlacement='start'
+        labelPlacement='bottom'
         className='checkbox'
         control={<Checkbox />}
-        label='New in?'
+        label='Club Deal'
+        checked={inputData.cluboffer}
+        sx={{
+          color: grey[900],
+          '& .MuiSvgIcon-root': { fontSize: 30, color: grey[900] }
+        }}
+        onChange={event => {
+          setInputData({ ...inputData, cluboffer: event.target.checked })
+        }}
+      />
+
+      <FormControlLabel
+        labelPlacement='bottom'
+        className='checkbox'
+        control={<Checkbox />}
+        label='New in'
         checked={inputData.newin}
         sx={{
           color: grey[900],
@@ -944,10 +1016,10 @@ ${
         }}
       />
       <FormControlLabel
-        labelPlacement='start'
+        labelPlacement='bottom'
         className='checkbox'
         control={<Checkbox />}
-        label='Back in Stock?'
+        label='Back in Stock'
         checked={inputData.backinstock}
         sx={{
           color: grey[900],
@@ -958,10 +1030,10 @@ ${
         }}
       />
       <FormControlLabel
-        labelPlacement='start'
+        labelPlacement='bottom'
         className='checkbox'
         control={<Checkbox />}
-        label='White?'
+        label='White'
         checked={inputData.white}
         sx={{
           color: grey[900],
