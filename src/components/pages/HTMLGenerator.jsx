@@ -99,9 +99,7 @@ function HTMLGenerator (props) {
                           <h3 class="c-tile-coupon3__heading t-heading u-font"><small contenteditable="false"></small></h3>
                           <h5 contenteditable="false" class="c-tile-coupon3__heading t-heading" style="color:${
                             inputData.white ? 'white' : 'black'
-                          } !important; font-size: 1.25rem">${
-            inputData.title
-          }</h5>
+                          } !important;>${inputData.title}</h5>
                           <div class="c-tile-coupon3__offer">
                               <div class="c-lockup">
                                   <div class="u-flex-column">
