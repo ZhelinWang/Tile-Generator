@@ -22,7 +22,7 @@ function HTMLGenerator (props) {
     title: '',
     imageURL: '',
     picklistURL: '',
-    everydayclub: false,
+    clubperk: false,
     cluboffer: false,
     newin: '',
     backinstock: '',
@@ -145,10 +145,10 @@ function HTMLGenerator (props) {
                   </div>
                   <!---->
                   ${
-                    inputData.everydayclub
+                    inputData.clubperk
                       ? `
                   <div class="c-tile-coupon3__footer">
-                    <div class="c-pill c-club-tag c-tile-coupon3__pill">EVERYDAY CLUB OFFER</div>
+                    <div class="c-pill c-club-tag c-tile-coupon3__pill">CLUB PERK</div>
                   </div>`
                       : ''
                   }
@@ -264,10 +264,10 @@ function HTMLGenerator (props) {
                           </div>
                       <!---->
                       ${
-                        inputData.everydayclub
+                        inputData.clubperk
                           ? `
                       <div class="c-tile-coupon3__footer">
-                        <div class="c-pill c-club-tag c-tile-coupon3__pill">EVERYDAY CLUB OFFER</div>
+                        <div class="c-pill c-club-tag c-tile-coupon3__pill">CLUB PERK</div>
                       </div>`
                           : ''
                       }
@@ -385,10 +385,10 @@ function HTMLGenerator (props) {
                     
                       <!---->
                       ${
-                        inputData.everydayclub
+                        inputData.clubperk
                           ? `
                       <div class="c-tile-coupon3__footer">
-                        <div class="c-pill c-club-tag c-tile-coupon3__pill">EVERYDAY CLUB OFFER</div>
+                        <div class="c-pill c-club-tag c-tile-coupon3__pill">CLUB PERK</div>
                       </div>`
                           : ''
                       }
@@ -504,10 +504,10 @@ function HTMLGenerator (props) {
                       </div>
                       <!---->
                       ${
-                        inputData.everydayclub
+                        inputData.clubperk
                           ? `
                       <div class="c-tile-coupon3__footer">
-                        <div class="c-pill c-club-tag c-tile-coupon3__pill">EVERYDAY CLUB OFFER</div>
+                        <div class="c-pill c-club-tag c-tile-coupon3__pill">CLUB PERK</div>
                       </div>`
                           : ''
                       }
@@ -623,10 +623,10 @@ function HTMLGenerator (props) {
                       </div>
                       <!---->
                       ${
-                        inputData.everydayclub
+                        inputData.clubperk
                           ? `
                       <div class="c-tile-coupon3__footer">
-                        <div class="c-pill c-club-tag c-tile-coupon3__pill">EVERYDAY CLUB OFFER</div>
+                        <div class="c-pill c-club-tag c-tile-coupon3__pill">CLUB PERK</div>
                       </div>`
                           : ''
                       }
@@ -742,10 +742,10 @@ function HTMLGenerator (props) {
                       </div>
                       <!---->
                       ${
-                        inputData.everydayclub
+                        inputData.clubperk
                           ? `
                       <div class="c-tile-coupon3__footer">
-                        <div class="c-pill c-club-tag c-tile-coupon3__pill">EVERYDAY CLUB OFFER</div>
+                        <div class="c-pill c-club-tag c-tile-coupon3__pill">CLUB PERK</div>
                       </div>`
                           : ''
                       }
@@ -855,10 +855,10 @@ ${
                   </div>
                   <!---->
                   ${
-                    inputData.everydayclub
+                    inputData.clubperk
                       ? `
                   <div class="c-tile-coupon3__footer">
-                    <div class="c-pill c-club-tag c-tile-coupon3__pill">EVERYDAY CLUB OFFER</div>
+                    <div class="c-pill c-club-tag c-tile-coupon3__pill">CLUB PERK</div>
                   </div>`
                       : ''
                   }
@@ -973,14 +973,14 @@ ${
         labelPlacement='bottom'
         className='checkbox'
         control={<Checkbox />}
-        label='Everyday Club'
-        checked={inputData.everydayclub}
+        label='Club Perk'
+        checked={inputData.clubperk}
         sx={{
           color: grey[900],
           '& .MuiSvgIcon-root': { fontSize: 30, color: grey[900] }
         }}
         onChange={event => {
-          setInputData({ ...inputData, everydayclub: event.target.checked })
+          setInputData({ ...inputData, clubperk: event.target.checked })
         }}
       />
 
