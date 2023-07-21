@@ -10,3 +10,11 @@
       margin: 8px auto;
     }
   }
+
+  @media only screen and (min-width: 767px) {
+    .inputFields {
+      width: 400px;
+      margin: 8px auto;
+    }
+  }
+

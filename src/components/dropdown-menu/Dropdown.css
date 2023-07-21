@@ -16,6 +16,7 @@
 }
 }
 
+@media only screen and (min-width: 250px) {  
 .dropdown .dropdown-btn {
   padding: 15px 20px;
   background: #fff;
@@ -29,6 +30,23 @@
   z-index: 12;
   border-radius: 10px;
 }
+}
+
+@media only screen and (min-width: 767px) {  
+  .dropdown .dropdown-btn {
+    padding: 15px 20px;
+    background: #fff;
+    box-shadow: 3px 3px 5px 3px rgba(0, 0, 0, 0.06);
+    font-weight: bold;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    z-index: 12;
+    border-radius: 10px;
+  }
+  }
 
 .dropdown .dropdown-content {
   position: absolute;

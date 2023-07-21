@@ -26,6 +26,7 @@ function HTMLGenerator (props) {
     cluboffer: false,
     newin: '',
     backinstock: '',
+    flashsale: '',
     white: false,
     x: '',
     y: '',
@@ -62,6 +63,10 @@ function HTMLGenerator (props) {
     // 'Brand Name'
     console.log(generatedHTML)
     setOutput(generatedHTML)
+  }
+
+  function tileBanner (inputData) {
+    
   }
 
   function tileGenerate (inputData) {
@@ -500,7 +505,7 @@ function HTMLGenerator (props) {
                               }
                               </div>
                               <!---->
-                          </div>
+                          
                       </div>
                       <!---->
                       ${
