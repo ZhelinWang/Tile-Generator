@@ -77,7 +77,7 @@ function HTMLGenerator (props) {
       inputData.selectedTile == 'Small Tile'
         ? `<div class="u-columns__column u-columns__column--six-s todo-item lmdd-block u-columns__column--three-l">`
         : inputData.selectedTile == 'Large Tile'
-        ? `<div class="u-columns__column u-columns__column--six-s todo-item lmdd-block u-columns__column--six-l">`
+        ? `<div class="u-columns__column u-columns__column--six-s todo-item lmdd-block u-columns__column--six-l-double">`
         : ``
     }  
           <article class="c-tile__wrap u-light-mode"><a href="${
@@ -190,7 +190,7 @@ function HTMLGenerator (props) {
       inputData.selectedTile == 'Small Tile'
         ? `<div class="u-columns__column u-columns__column--six-s todo-item lmdd-block u-columns__column--three-l">`
         : inputData.selectedTile == 'Large Tile'
-        ? `<div class="u-columns__column u-columns__column--six-s todo-item lmdd-block u-columns__column--six-l">`
+        ? `<div class="u-columns__column u-columns__column--six-s todo-item lmdd-block u-columns__column--six-l-double">`
         : ``
     }  
     <article class="c-tile__wrap u-light-mode"><a href="${
@@ -310,7 +310,7 @@ function HTMLGenerator (props) {
       inputData.selectedTile == 'Small Tile'
         ? `<div class="u-columns__column u-columns__column--six-s todo-item lmdd-block u-columns__column--three-l">`
         : inputData.selectedTile == 'Large Tile'
-        ? `<div class="u-columns__column u-columns__column--six-s todo-item lmdd-block u-columns__column--six-l">`
+        ? `<div class="u-columns__column u-columns__column--six-s todo-item lmdd-block u-columns__column--six-l-double">`
         : ``
     }  
     <article class="c-tile__wrap u-light-mode"><a href="${
@@ -431,7 +431,7 @@ function HTMLGenerator (props) {
       inputData.selectedTile == 'Small Tile'
         ? `<div class="u-columns__column u-columns__column--six-s todo-item lmdd-block u-columns__column--three-l">`
         : inputData.selectedTile == 'Large Tile'
-        ? `<div class="u-columns__column u-columns__column--six-s todo-item lmdd-block u-columns__column--six-l">`
+        ? `<div class="u-columns__column u-columns__column--six-s todo-item lmdd-block u-columns__column--six-l-double">`
         : ``
     }  
     <article class="c-tile__wrap u-light-mode"><a href="${
@@ -550,7 +550,7 @@ function HTMLGenerator (props) {
       inputData.selectedTile == 'Small Tile'
         ? `<div class="u-columns__column u-columns__column--six-s todo-item lmdd-block u-columns__column--three-l">`
         : inputData.selectedTile == 'Large Tile'
-        ? `<div class="u-columns__column u-columns__column--six-s todo-item lmdd-block u-columns__column--six-l">`
+        ? `<div class="u-columns__column u-columns__column--six-s todo-item lmdd-block u-columns__column--six-l-double">`
         : ``
     }  
     <article class="c-tile__wrap u-light-mode"><a href="${
@@ -669,7 +669,7 @@ function HTMLGenerator (props) {
       inputData.selectedTile == 'Small Tile'
         ? `<div class="u-columns__column u-columns__column--six-s todo-item lmdd-block u-columns__column--three-l">`
         : inputData.selectedTile == 'Large Tile'
-        ? `<div class="u-columns__column u-columns__column--six-s todo-item lmdd-block u-columns__column--six-l">`
+        ? `<div class="u-columns__column u-columns__column--six-s todo-item lmdd-block u-columns__column--six-l-double">`
         : ``
     }  
     <article class="c-tile__wrap u-light-mode"><a href="${
@@ -788,7 +788,7 @@ ${
   inputData.selectedTile == 'Small Tile'
     ? `<div class="u-columns__column u-columns__column--six-s todo-item lmdd-block u-columns__column--three-l">`
     : inputData.selectedTile == 'Large Tile'
-    ? `<div class="u-columns__column u-columns__column--six-s todo-item lmdd-block u-columns__column--six-l">`
+    ? `<div class="u-columns__column u-columns__column--six-s todo-item lmdd-block u-columns__column--six-l-double">`
     : ``
 }  
 <article class="c-tile__wrap u-light-mode"><a href="${
