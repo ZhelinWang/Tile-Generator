@@ -19,6 +19,7 @@ function HTMLGenerator (props) {
   const [inputData, setInputData] = useState({
     selectedTile: 'Select type of Tile...',
     selectedDeal: 'Select type of Deal...',
+    selectedPage: 'Select type of Page...',
     title: '',
     imageURL: '',
     picklistURL: '',
@@ -947,6 +948,19 @@ ${
         selected={inputData.selectedDeal}
         onSelected={selectedItem => {
           setInputData({ ...inputData, selectedDeal: selectedItem })
+        }}
+      />
+         <Dropdown
+        style={{ zIndex: '11' }}
+        options={[
+          'Homepage',
+          'Category Landing Page',
+          'Brand Page',
+          'Landing Page'
+        ]}
+        selected={inputData.selectedPage}
+        onSelected={selectedItem => {
+          setInputData({ ...inputData, selectedPage: selectedItem })
         }}
       />
       <InputFields
