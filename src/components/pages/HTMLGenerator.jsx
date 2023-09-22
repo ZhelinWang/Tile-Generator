@@ -82,7 +82,7 @@ function HTMLGenerator (props) {
                         }" media="(min-width: 600px)">
                         <source srcset="${
                           inputData.imageURL.length > 53
-                            ? inputData.imageURL.replace(
+                            ? inputData.imageURL.replace(     
                                 /(_[0-9])\w+/g,
                                 '_458x412'
                               )
