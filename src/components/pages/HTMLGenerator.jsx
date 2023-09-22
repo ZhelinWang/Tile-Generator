@@ -49,7 +49,6 @@ function HTMLGenerator (props) {
         break
       case 'Banner':
         generatedHTML = tileBanner(inputData)
-        alert('Banner is currently WIP')
         break
       default:
         alert('Please select a tile type...')
@@ -67,7 +66,49 @@ function HTMLGenerator (props) {
   }
 
   function tileBanner (inputData) {
-    
+    const output = `
+    <section class="m-wrap js-animate-module mt-1">
+    <div class="m-wrap__card">
+        <div class="m-wrap__inner">
+                     <div class="m-wrap__content"><a 
+                     data-twg-id="${inputData.selectedPage} ${inputData.title}"
+                     data-mce-href="${inputData.picklistURL}"
+                     href="${inputData.picklistURL}" class="promo_box">
+                     <picture class="u-full-width">
+                        <source srcset="${
+                          inputData.imageURL.length > 53
+                            ? inputData.imageURL
+                            : 'https://www.torpedo7.co.nz' + inputData.imageURL
+                        }" media="(min-width: 600px)">
+                        <source srcset="${
+                          inputData.imageURL.length > 53
+                            ? inputData.imageURL.replace(
+                                /(_[0-9])\w+/g,
+                                '_458x412'
+                              )
+                            : 'https://www.torpedo7.co.nz' +
+                              inputData.imageURL.replace(
+                                /(_[0-9])\w+/g,
+                                '_458x412'
+                              )
+                        }" media="(min-width: 0px)"> <img loading="lazy" style="width: 100%;" src="${
+      inputData.imageURL.length > 53
+        ? inputData.imageURL
+        : 'https://www.torpedo7.co.nz' + inputData.imageURL
+    }" alt="${inputData.title}" data-mce-src="${
+      inputData.imageURL.length > 53
+        ? inputData.imageURL
+        : 'https://www.torpedo7.co.nz' + inputData.imageURL
+    }" data-mce-style="width: 100%;">
+                    </picture>
+                </a></div>
+        </div>
+    </div>
+    </section>
+`
+
+    console.log(output)
+    return output
   }
 
   function tileGenerate (inputData) {
@@ -83,7 +124,7 @@ function HTMLGenerator (props) {
     }  
           <article class="c-tile__wrap u-light-mode"><a href="${
             inputData.picklistURL
-          }" aria-hidden="true" data-twg-id="${
+          }" aria-hidden="true" data-twg-id="${inputData.selectedPage} ${
             inputData.title
           }" class="c-tile__link promo_box">${inputData.title}
           </a>
@@ -196,7 +237,7 @@ function HTMLGenerator (props) {
     }  
     <article class="c-tile__wrap u-light-mode"><a href="${
       inputData.picklistURL
-    }" aria-hidden="true" data-twg-id="${
+    }" aria-hidden="true" data-twg-id="${inputData.selectedPage} ${
             inputData.title
           }" class="c-tile__link promo_box">${inputData.title}
     </a>
@@ -316,7 +357,7 @@ function HTMLGenerator (props) {
     }  
     <article class="c-tile__wrap u-light-mode"><a href="${
       inputData.picklistURL
-    }" aria-hidden="true" data-twg-id="${
+    }" aria-hidden="true" data-twg-id="${inputData.selectedPage} ${
             inputData.title
           }" class="c-tile__link promo_box">${inputData.title}
     </a>
@@ -437,7 +478,7 @@ function HTMLGenerator (props) {
     }  
     <article class="c-tile__wrap u-light-mode"><a href="${
       inputData.picklistURL
-    }" aria-hidden="true" data-twg-id="${
+    }" aria-hidden="true" data-twg-id="${inputData.selectedPage} ${
             inputData.title
           }" class="c-tile__link promo_box">${inputData.title}
     </a>
@@ -556,7 +597,7 @@ function HTMLGenerator (props) {
     }  
     <article class="c-tile__wrap u-light-mode"><a href="${
       inputData.picklistURL
-    }" aria-hidden="true" data-twg-id="${
+    }" aria-hidden="true" data-twg-id="${inputData.selectedPage} ${
             inputData.title
           }" class="c-tile__link promo_box">${inputData.title}
     </a>
@@ -675,7 +716,7 @@ function HTMLGenerator (props) {
     }  
     <article class="c-tile__wrap u-light-mode"><a href="${
       inputData.picklistURL
-    }" aria-hidden="true" data-twg-id="${
+    }" aria-hidden="true" data-twg-id="${inputData.selectedPage} ${
             inputData.title
           }" class="c-tile__link promo_box">${inputData.title}
     </a> 
@@ -794,7 +835,7 @@ ${
 }  
 <article class="c-tile__wrap u-light-mode"><a href="${
             inputData.picklistURL
-          }" aria-hidden="true" data-twg-id="${
+          }" aria-hidden="true" data-twg-id="${inputData.selectedPage} ${
             inputData.title
           }" class="c-tile__link promo_box">${inputData.title}
 </a> 
@@ -950,14 +991,9 @@ ${
           setInputData({ ...inputData, selectedDeal: selectedItem })
         }}
       />
-         <Dropdown
+      <Dropdown
         style={{ zIndex: '11' }}
-        options={[
-          'Homepage',
-          'Category Landing Page',
-          'Brand Page',
-          'Landing Page'
-        ]}
+        options={['HP', 'CLP', 'BP', 'LP']}
         selected={inputData.selectedPage}
         onSelected={selectedItem => {
           setInputData({ ...inputData, selectedPage: selectedItem })
