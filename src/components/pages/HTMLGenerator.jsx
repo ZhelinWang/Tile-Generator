@@ -175,7 +175,7 @@ function HTMLGenerator (props) {
                             inputData.excludes
                               ? `<div class="c-lockup">
                                       <div class="c-lockup__price-title mt-1">
-                                        <div class="u-flex-justify-center c-lockup__label u-uppercase" style="color:${
+                                        <div class="u-flex-justify-center c-lockup__label u-uppercase exclude-text" style="color:${
                                           inputData.white ? 'white' : 'black'
                                         } !important;"><small contenteditable="false" style="color:${
                                   inputData.white ? 'white' : 'black'
@@ -293,7 +293,7 @@ function HTMLGenerator (props) {
                                 inputData.excludes
                                   ? `<div class="c-lockup">
                                           <div class="c-lockup__price-title mt-1">
-                                            <div class="u-flex-justify-center c-lockup__label u-uppercase" style="color:${
+                                            <div class="u-flex-justify-center c-lockup__label u-uppercase exclude-text" style="color:${
                                               inputData.white
                                                 ? 'white'
                                                 : 'black'
@@ -413,7 +413,7 @@ function HTMLGenerator (props) {
                                 inputData.excludes
                                   ? `<div class="c-lockup">
                                           <div class="c-lockup__price-title mt-1">
-                                            <div class="u-flex-justify-center c-lockup__label u-uppercase" style="color:${
+                                            <div class="u-flex-justify-center c-lockup__label u-uppercase exclude-text" style="color:${
                                               inputData.white
                                                 ? 'white'
                                                 : 'black'
@@ -532,11 +532,11 @@ function HTMLGenerator (props) {
                                 inputData.excludes
                                   ? `<div class="c-lockup">
                                           <div class="c-lockup__price-title mt-1">
-                                            <div class="u-flex-justify-center c-lockup__label u-uppercase" style="color:${
+                                            <div class="u-flex-justify-center c-lockup__label u-uppercase exclude-text" style="color:${
                                               inputData.white
                                                 ? 'white'
                                                 : 'black'
-                                            } !important;"><small contenteditable="false" style="color:${
+                                            } !important; max-width:30ch !important; font-size: 8px !important;"><small contenteditable="false" style="color:${
                                       inputData.white ? 'white' : 'black'
                                     } !important;">${
                                       inputData.excludes
@@ -651,7 +651,7 @@ function HTMLGenerator (props) {
                                 inputData.excludes
                                   ? `<div class="c-lockup">
                                           <div class="c-lockup__price-title mt-1">
-                                            <div class="u-flex-justify-center c-lockup__label u-uppercase" style="color:${
+                                            <div class="u-flex-justify-center c-lockup__label u-uppercase exclude-text" style="color:${
                                               inputData.white
                                                 ? 'white'
                                                 : 'black'
@@ -770,7 +770,7 @@ function HTMLGenerator (props) {
                                 inputData.excludes
                                   ? `<div class="c-lockup">
                                           <div class="c-lockup__price-title mt-1">
-                                            <div class="u-flex-justify-center c-lockup__label u-uppercase" style="color:${
+                                            <div class="u-flex-justify-center c-lockup__label u-uppercase exclude-text" style="color:${
                                               inputData.white
                                                 ? 'white'
                                                 : 'black'
@@ -885,7 +885,7 @@ ${
                             inputData.excludes
                               ? `<div class="c-lockup">
                                       <div class="c-lockup__price-title mt-1">
-                                        <div class="u-flex-justify-center c-lockup__label u-uppercase" style="color:${
+                                        <div class="u-flex-justify-center c-lockup__label u-uppercase exclude-text" style="color:${
                                           inputData.white ? 'white' : 'black'
                                         } !important;"><small contenteditable="false" style="color:${
                                   inputData.white ? 'white' : 'black'
